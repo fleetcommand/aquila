@@ -1,0 +1,32 @@
+
+Aquila DC Hub Installation manual
+
+This software is covered by the GPL.
+
+Just do 
+	./configure
+	make
+	make install
+
+Then create a directory to run aquila in.
+In that directory, run the following command
+
+	aqpasswd accounts.conf <owner> <passwd>
+
+Replace <owner> with the nick of the hub owner and <passwd> with his
+password. Then start the hub.
+
+By default, the hub starts at port 411. If you do not wish to run Aquila as
+root, you can make the hub start port <port> by creating the file
+hub.conf with contents:
+
+nmdc.listenport <port>
+
+Then start Aquila. Log into the hub as owner and type "!save". This should
+create all configuration files. All configuration can (and should) be
+changed from within the hub.
+
+Check out the Aquila Website for more information.
+http://aquila.berlios.de/index.php/Manual#Aquila_Installation
+
+Enjoy!

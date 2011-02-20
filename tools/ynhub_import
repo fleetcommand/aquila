@@ -1,0 +1,72 @@
+#!/usr/bin/php
+<?
+/*                                                              
+ *  (C) Copyright 2006 Johan Verrept (jove@users.berlios.de)
+ *
+ *  This file is subject to the terms and conditions of the GNU General
+ *  Public License.  See the file COPYING in the main directory of this
+ *  distribution for more details.
+ * 
+ */
+
+        if (!isset ($argv[1])) {
+                printf( "Usage: " . $argv[0] . " [<file>]\n");
+                printf(" <file> this is your ynhub accounts file.\n");
+                exit;                                                   
+        }            
+
+        $file = $argv[1];
+	$fp = fopen ($argv[1], "r+");
+
+	$current = 0;
+	$profcnt = 0;
+	while ($line = fgets ($fp)) {
+		if (strstr ($line, "</Account>"))
+			$current++;
+		if (strstr ($line, "<Nick>")) {
+			$fields = split ("<|>", $line);
+			$users[$current]["nick"] = str_replace(" ", "_", $fields[2]);
+		}
+		if (strstr ($line, "<Pass>")) {
+			$fields = split ("<|>", $line);
+			$users[$current]["passwd"] = str_replace(" ", "_", $fields[2]);
+		}
+		if (strstr ($line, "<Profile>")) {
+			$fields = split ("<|>", $line);
+			$users[$current]["profile"] = $fields[2];
+			$profiles[str_replace(" ", "_", $fields[2])]["exists"] = 1;
+		}
+		
+	}
+	fclose ($fp);
+
+	//$output = "T regs 28160 5\nT vips 290305 4\nT ops 2911759 3\nT cheefs 2911823 2\nT admins 2912223 1\nT owner 2150395871 0\n";
+
+	$groups = array (1 => 28160, 2 => 290305, 3 => 2911759, 4 => 2911823, 5 => 2912223, 6 => 215039587);
+
+	$i = 0;
+	$output = "";
+	printf ("Please select the number of the closest matching aquila profile:\n");
+	printf (" regs (1), vips (2), ops (3), cheefs (4), admins (5), hub owner (6)\n");
+	printf ("Later, you can adjust these more accuratly.\n");
+	foreach ($profiles as $profile => $dummy) {
+		do {
+			printf ("%s : ", $profile);
+			fscanf(STDIN, "%s\n", $answer);
+		} while (!is_numeric ($answer) || ($answer < 1) || ($answer > 6));
+		$profiles[$profile]["id"] = $i;
+		$profiles[$profile]["count"] = 0;		
+		$output .= "T " . $profile . " " . $groups[$answer] . " " . $i . "\n";
+		$i++;
+	};
+	foreach ($users as $user) {
+		$salt='';
+ 		while(strlen($salt)<2) {
+			do { $c = rand(45,122); } while ((($c > 57)&&($c < 65))||(($c > 90)&&($c < 97)));
+			$salt.=chr($c);
+		}
+		$output .= "A " . $user["nick"] . " " . crypt ($user["passwd"], $salt) . " 0 " . $profiles[$user["profile"]]["id"] . " " . $profiles[$user["profile"]]["count"] . " import_verlihub " . time() . " 0\n";
+	};
+
+	echo $output;
+?>

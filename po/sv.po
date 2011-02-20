@@ -1,0 +1,3621 @@
+# Swedish translations for Aquila package
+# Svenska översättningar för paket Aquila.
+# Copyright (C) 2007 Johan Verrept
+# This file is distributed under the same license as the Aquila package.
+# en_dator <endator@gmail.com>, 2007.#
+msgid ""
+msgstr ""
+"Project-Id-Version: Aquila 0.1.11-pre1-beta39\n"
+"Report-Msgid-Bugs-To: jove@users.berlios.de\n"
+"POT-Creation-Date: 2008-11-13 21:49+0100\n"
+"PO-Revision-Date: 2007-04-17 00:24+0100\n"
+"Last-Translator: en_dator <endator@gmail.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/builtincmd.c:127
+#, c-format
+msgid "Usage: %s <nick> <warning>"
+msgstr "Användning: %s <nick> <warning>"
+
+#: src/builtincmd.c:134 src/builtincmd.c:339 src/builtincmd.c:406
+#: src/builtincmd.c:460 src/builtincmd.c:506 src/builtincmd.c:712
+#: src/builtincmd.c:763 src/builtincmd.c:776 src/builtincmd.c:1294
+#: src/builtincmd.c:1395 src/builtincmd.c:1474 src/builtincmd.c:1525
+#: src/builtincmd.c:1591
+#, c-format
+msgid "User %s not found."
+msgstr "Användaren %s finns inte."
+
+#: src/builtincmd.c:141
+#, c-format
+msgid "%s is WARNING you: "
+msgstr "%s VARNAR dig: "
+
+#: src/builtincmd.c:173
+msgid "Hub shutdown in progress."
+msgstr "Hubben håller på att stängas ner."
+
+#: src/builtincmd.c:194
+#, c-format
+msgid "This is %s Version %s"
+msgstr "Det här är %s version %s"
+
+#: src/builtincmd.c:206
+#, c-format
+msgid "Usage: %s <message>"
+msgstr "Användning: %s <message>"
+
+#: src/builtincmd.c:231
+#, c-format
+msgid "Message sent to %lu users."
+msgstr "Meddelande skickat till %lu användare."
+
+#: src/builtincmd.c:247 src/builtincmd.c:326 src/builtincmd.c:392
+#, c-format
+msgid "Usage: %s <nick> <reason>"
+msgstr "Användning: %s <nick> <reason>"
+
+#: src/builtincmd.c:254
+msgid "Report could not be sent. Reporting is disabled."
+msgstr "Rapporten kunde inte skickas. Rapportfunktionen är avstängd."
+
+#: src/builtincmd.c:273
+#, c-format
+msgid "User %s (%s) reports %s (%s): "
+msgstr "Användare %s (%s) rapporterar %s (%s): "
+
+#: src/builtincmd.c:275
+#, c-format
+msgid "User %s (%s) reports %s (not logged in): "
+msgstr "Användare %s (%s) rapporterar %s (som inte är inloggad): "
+
+#: src/builtincmd.c:287
+#, c-format
+msgid "Report could not be sent, %s not found."
+msgstr "Rapporten kunde inte skickas, %s finns inte."
+
+#: src/builtincmd.c:289
+msgid "Report could not be sent, target not found."
+msgstr "Rapporten kunde inte skickas, inställning för reporttarget saknas."
+
+#: src/builtincmd.c:298
+msgid "Report sent."
+msgstr "Rapport skickad."
+
+#: src/builtincmd.c:310
+#, c-format
+msgid "Your IP is %s\n"
+msgstr "Ditt IP är %s\n"
+
+#: src/builtincmd.c:345
+#, c-format
+msgid "Kicked user %s ( ip %s ) because: %.*s"
+msgstr "Användare %s kickad ( ip %s ) på grund av: %.*s"
+
+#: src/builtincmd.c:358 src/builtincmd.c:424
+#, c-format
+msgid ""
+"\n"
+"Banning user for %s\n"
+msgstr ""
+"\n"
+"Användare bannad i %s\n"
+
+#: src/builtincmd.c:360 src/builtincmd.c:426
+msgid ""
+"\n"
+"Banning user forever"
+msgstr ""
+"\n"
+"Användare bannad för evigt"
+
+#: src/builtincmd.c:365
+#, c-format
+msgid ""
+"\n"
+"Sorry. You cannot ban users for longer than %s with a kick."
+msgstr ""
+"\n"
+"Tyvärr, du kan inte banna en användare längre än %s med kick-kommandot."
+
+#: src/builtincmd.c:369 src/builtincmd.c:434
+msgid ""
+"\n"
+"Sorry, you cannot ban."
+msgstr ""
+"\n"
+"Tyvärr, du har inte rätt att banna."
+
+#: src/builtincmd.c:399
+#, c-format
+msgid "You were dropped by %s because: "
+msgstr "Du har blivit droppad av %s på grund av: "
+
+#: src/builtincmd.c:412
+#, c-format
+msgid "Dropped user %s (ip %s) because: %.*s"
+msgstr "Användare %s (ip %s) droppad på grund av: %.*s"
+
+#: src/builtincmd.c:430
+#, c-format
+msgid ""
+"\n"
+"Sorry. You cannot ban users for longer than %s with a drop."
+msgstr ""
+"\n"
+"Tyvärr, du kan inte banna en användare längre än %s med drop-kommandot."
+
+#: src/builtincmd.c:454 src/builtincmd.c:500 src/builtincmd.c:559
+#: src/builtincmd.c:1348 src/builtincmd.c:1383 src/pi_user.c:337
+#, c-format
+msgid "Usage: %s <nick>"
+msgstr "Användning: %s <nick>"
+
+#: src/builtincmd.c:466
+#, c-format
+msgid "User %s's putrid flesh stinks up the place..."
+msgstr "Användare %s ruttnande kropp förpestar stället..."
+
+#: src/builtincmd.c:478
+msgid "The hub is infested by the following zombie horde:\n"
+msgstr "Hubben är infekterad av följande zombiehordar:\n"
+
+#: src/builtincmd.c:489
+msgid "No zombies found!\n"
+msgstr "Inga zombies här!\n"
+
+#: src/builtincmd.c:512
+#, c-format
+msgid "User %s's putrid flesh is miraculously restored..."
+msgstr "Användare %s är mirakulöst återställd..."
+
+#: src/builtincmd.c:524 src/builtincmd.c:578 src/builtincmd.c:601
+#, c-format
+msgid "Usage: %s <ip>"
+msgstr "Användning: %s <ip>"
+
+#: src/builtincmd.c:533 src/builtincmd.c:542
+#, c-format
+msgid "User %s is using IP %s\n"
+msgstr "Användare %s har IP %s\n"
+
+#: src/builtincmd.c:537 src/builtincmd.c:546
+#, c-format
+msgid "No one using IP %s found."
+msgstr "Hittar ingen som använder IP %s ."
+
+#: src/builtincmd.c:549 src/builtincmd.c:589 src/builtincmd.c:612
+#: src/builtincmd.c:903
+#, c-format
+msgid "Sorry, \"%s\" is not a recognisable IP address."
+msgstr "Tyvärr, \"%s\" ser inte ut som en IP adress."
+
+#: src/builtincmd.c:564
+#, c-format
+msgid "Nick %s unbanned."
+msgstr "Namnet %s är bortaget ur banlistan"
+
+#: src/builtincmd.c:566
+#, c-format
+msgid "No ban for nick %s found."
+msgstr "Kan inte hitta användarnamnet %s i banlistan."
+
+#: src/builtincmd.c:584 src/builtincmd.c:607
+#, c-format
+msgid "IP %s unbanned."
+msgstr "IP %s är bortaget ur banlistan"
+
+#: src/builtincmd.c:586 src/builtincmd.c:609
+#, c-format
+msgid "No ban for IP %s found."
+msgstr "Kan inte hitta IP %s i banlistan."
+
+#: src/builtincmd.c:628 src/builtincmd.c:808
+#, c-format
+msgid "Usage: %s <ip/nick> [<period>] <reason>"
+msgstr "Användning: %s <ip/nick> [<period>] <reason>"
+
+#: src/builtincmd.c:646
+#, c-format
+msgid "IP Banning user %s (ip %s) forever: %.*s"
+msgstr "IP bannar användare %s (ip %s) för evigt: %.*s"
+
+#: src/builtincmd.c:649
+#, c-format
+msgid "IP Banning user %s (ip %s) for %s: %.*s"
+msgstr "IP bannar användare %s (ip %s) i %s: %.*s"
+
+#: src/builtincmd.c:656
+#, c-format
+msgid "User %s offline, found in iplog\n"
+msgstr "Användare %s är offline, hittad i iploggen\n"
+
+#: src/builtincmd.c:659
+#, c-format
+msgid "IP Banning %s (ip %s) forever: %.*s."
+msgstr "IP bannar %s (ip %s) för evigt: %.*s."
+
+#: src/builtincmd.c:662
+#, c-format
+msgid "IP Banning %s (ip %s) for %s: %.*s"
+msgstr "IP bannar %s (ip %s) i %s: %.*s"
+
+#: src/builtincmd.c:670
+#, c-format
+msgid "IP Banning %s forever: %.*s."
+msgstr "IP bannar %s för evigt: %.*s."
+
+#: src/builtincmd.c:673
+#, c-format
+msgid "IP Banning %s for %s: %.*s"
+msgstr "IP bannar %s i %s: %.*s"
+
+#: src/builtincmd.c:677
+#, c-format
+msgid "User not found or IP address not valid: %s\n"
+msgstr "Användaren finns inte eller är IP adressen fel: %s\n"
+
+#: src/builtincmd.c:695 src/builtincmd.c:746
+#, c-format
+msgid "Usage: %s <nick> [<period>] <reason>"
+msgstr "Användning: %s <nick> [<period>] <reason>"
+
+#: src/builtincmd.c:717
+#, c-format
+msgid "Banned nick %s forever: %.*s"
+msgstr "Användarnamn %s bannat för evigt: %.*s"
+
+#: src/builtincmd.c:719
+#, c-format
+msgid "Banned nick %s for %s: %.*s"
+msgstr "Användarnamn %s bannad i %s: %.*s"
+
+#: src/builtincmd.c:767
+#, c-format
+msgid "User %s not online, found in iplog.\n"
+msgstr "Användare %s är inte online, hittad i iploggen.\n"
+
+#: src/builtincmd.c:785
+#, c-format
+msgid "Banning user %s (ip %s) forever: %.*s"
+msgstr "Bannar användare %s (ip %s) för evigt: %.*s"
+
+#: src/builtincmd.c:788
+#, c-format
+msgid "Banning user %s (ip %s) for %s: %.*s"
+msgstr "Bannar användare %s (ip %s) i %s: %.*s"
+
+#: src/builtincmd.c:824
+#, c-format
+msgid "HARD Banning user %s (ip %s) forever: %.*s"
+msgstr "Hårdbannar användare %s (ip %s) för evigt: %.*s"
+
+#: src/builtincmd.c:827
+#, c-format
+msgid "HARD Banning user %s (ip %s) for %s: %.*s"
+msgstr "Hårdbannar användare %s (ip %s) i %s: %.*s"
+
+#: src/builtincmd.c:834
+#, c-format
+msgid "HARD Banning ip %s forever: %.*s"
+msgstr "Hårdbannar ip %s för evigt: %.*s"
+
+#: src/builtincmd.c:837
+#, c-format
+msgid "HARD Banning ip %s for %s: %.*s"
+msgstr "Hårdbannar ip %s i %s: %.*s"
+
+#: src/builtincmd.c:842
+#, c-format
+msgid "User not found or ip address not valid: %s\n"
+msgstr "Användaren finns inte eller är IP adressen fel: %s\n"
+
+#: src/builtincmd.c:857 src/builtincmd.c:888
+#, c-format
+msgid "Usage: %s [<ip|nick>]"
+msgstr "Användning: %s [<ip|nick>]"
+
+#: src/builtincmd.c:863 src/builtincmd.c:894
+msgid "No bans found."
+msgstr "Inga ban hittades."
+
+#: src/builtincmd.c:868 src/builtincmd.c:899
+#, c-format
+msgid "No IP bans found for %s"
+msgstr "Inget IP ban hittades för %s"
+
+#: src/builtincmd.c:873
+#, c-format
+msgid "No Nick bans found for %s"
+msgstr "Inget nickban hittades för %s"
+
+#: src/builtincmd.c:922
+msgid "Available commands:\n"
+msgstr "Tillgängliga kommandon:\n"
+
+#: src/builtincmd.c:928
+msgid "Commands are preceded with ! or +\n"
+msgstr "Du kan använda ! eller + före kommandon\n"
+
+#: src/builtincmd.c:929
+#, c-format
+msgid ""
+"\n"
+"This hub is running %s Version %s. For more help, see %s\n"
+msgstr ""
+"\n"
+"Den här hubben kör %s version %s. För mera hjälp, se %s\n"
+
+#: src/builtincmd.c:949
+#, c-format
+msgid "Command %s not found.\n"
+msgstr "Kommandot %s finns inte.\n"
+
+#: src/builtincmd.c:964
+#, c-format
+msgid "Usage: %s <name> <help>\n"
+msgstr "Användning: %s <name> <help>\n"
+
+#: src/builtincmd.c:976
+#, c-format
+msgid "Right %s could not be created.\n"
+msgstr "Rättighet %s kunde inte skapas.\n"
+
+#: src/builtincmd.c:978
+#, c-format
+msgid "Right %s created.\n"
+msgstr "Rättighet %s har skapats.\n"
+
+#: src/builtincmd.c:988 src/pi_rrd.c:466
+#, c-format
+msgid "Usage: %s <name>\n"
+msgstr "Användning: %s <name>\n"
+
+#: src/builtincmd.c:993
+#, c-format
+msgid "Right %s could not be found.\n"
+msgstr "Rättigheten %s kunde inte hittas.\n"
+
+#: src/builtincmd.c:995
+#, c-format
+msgid "Right %s destroyed.\n"
+msgstr "Rättigheten %s har tagits bort.\n"
+
+#: src/builtincmd.c:1013
+#, c-format
+msgid "Usage: %s <group> <rights>...\n"
+msgstr "Användning: %s <group> <rights>...\n"
+
+#: src/builtincmd.c:1019
+#, c-format
+msgid "Group %s already exists.\n"
+msgstr "Gruppen %s finns redan.\n"
+
+#: src/builtincmd.c:1034 src/builtincmd.c:1077 src/builtincmd.c:1873
+msgid "You are not allowed to assign rights.\n"
+msgstr "Du har inte rätt att tilldela rättigheter.\n"
+
+#: src/builtincmd.c:1038 src/builtincmd.c:1081
+msgid "You are not allowed to assign the following rights to this group: "
+msgstr ""
+"Du har inte rätt att tilldela följande rättigheter till den här gruppen: "
+
+#: src/builtincmd.c:1046
+#, c-format
+msgid "Group %s created with: "
+msgstr "Grupp %s är skapad med: "
+
+#: src/builtincmd.c:1061
+#, c-format
+msgid "Usage: %s <group> <[+]right/-right>...\n"
+msgstr "Användning: %s <group> <[+]right/-right>...\n"
+
+#: src/builtincmd.c:1067 src/builtincmd.c:1119 src/builtincmd.c:1175
+#: src/builtincmd.c:1214
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "Gruppen %s finns inte.\n"
+
+#: src/builtincmd.c:1088
+msgid "You are not allowed to remove the following rights from this group: "
+msgstr ""
+"Du har inte rätt att ta bort följande rättigheter från den här gruppen: "
+
+#: src/builtincmd.c:1098
+#, c-format
+msgid "Group %s modified. Current rights:"
+msgstr "Grupp %s är ändrad. Nuvarande rättigheter är:"
+
+#: src/builtincmd.c:1112
+#, c-format
+msgid "Usage: %s <group>"
+msgstr "Användning: %s <group>"
+
+#: src/builtincmd.c:1124
+#, c-format
+msgid "Group %s still has %ld users.\n"
+msgstr "Grupp %s har fortfarande %ld användare.\n"
+
+#: src/builtincmd.c:1129
+#, c-format
+msgid "Group %s deleted.\n"
+msgstr "Grupp %s är borttagen.\n"
+
+#: src/builtincmd.c:1178
+#, c-format
+msgid ""
+"\n"
+"Group %s:\n"
+" "
+msgstr ""
+"\n"
+"Grupp %s:\n"
+" "
+
+#: src/builtincmd.c:1205
+#, c-format
+msgid "Usage: %s <nick> <group> [<rights...>]"
+msgstr "Användning: %s <nick> <group> [<rights...>]"
+
+#: src/builtincmd.c:1210
+#, c-format
+msgid "User %s already exists.\n"
+msgstr "Användare %s finns redan.\n"
+
+#: src/builtincmd.c:1224 src/builtincmd.c:1489
+msgid "You are not allowed to assign a user to this group.\n"
+msgstr "Du har inte rätt att lägga till användare i den här gruppen.\n"
+
+#: src/builtincmd.c:1230 src/builtincmd.c:1289
+msgid "You are not allowed to assign a user extra rights.\n"
+msgstr "Du har inte rätt att tilldela användare extra rättigheter.\n"
+
+#: src/builtincmd.c:1234
+msgid "You are not allowed to assign this user: "
+msgstr "Du har inte rätt att tilldela den här användaren: "
+
+#: src/builtincmd.c:1244
+#, c-format
+msgid ""
+"User %s created with group %s.\n"
+"Current rights:"
+msgstr ""
+"Användare %s skapad tillhörande grupp %s.\n"
+"Nuvarande rättigheter:"
+
+#: src/builtincmd.c:1257
+#, c-format
+msgid ""
+"You have been registered by %s. Please use !passwd <password> to set a "
+"password and relogin to gain your new rights. You have been assigned:\n"
+msgstr ""
+"Du har blivit registrerad av %s. Använd !passwd <password> för att skapa ett "
+"lösenord och logga ut och in igen för att aktivera dina nya rättigheter. Du "
+"har fått:\n"
+
+#: src/builtincmd.c:1265
+msgid ""
+"User is already logged in. He has been told to set a password and to "
+"relogin.\n"
+msgstr ""
+"Användaren är redan inloggad. Han/Hon har fått meddelande om att skapa ett "
+"lösenord och att logga ut och in igen.\n"
+
+#: src/builtincmd.c:1269
+#, c-format
+msgid ""
+"No user with nickname %s is currently logged in. Please notify the user "
+"yourself.\n"
+msgstr ""
+"Ingen användare med namnet %s är inloggad just nu. Du måste själv informera "
+"användaren.\n"
+
+#: src/builtincmd.c:1283
+#, c-format
+msgid "Usage: %s <nick> <[+]right/-right>...\n"
+msgstr "Användning: %s <nick> <[+]right/-right>...\n"
+
+#: src/builtincmd.c:1304
+msgid "You are not allowed to assign the following rights to this user: "
+msgstr "Du har inte rätt att ge följande rättigheter till den här användaren: "
+
+#: src/builtincmd.c:1310
+msgid "You are not allowed to touch: "
+msgstr "Icke sa Nicke, den här gubben rör du inte: "
+
+#: src/builtincmd.c:1322
+#, c-format
+msgid "Warning! User %s is still awarded the following rights by his group:"
+msgstr ""
+"Varning! Användaren %s har fortfarande följande rättigheter genom sin grupp:"
+
+#: src/builtincmd.c:1328
+#, c-format
+msgid ""
+"User %s with group %s.\n"
+"Current rights:"
+msgstr ""
+"Användare %s i grupp %s.\n"
+"Nuvarande rättigheter:"
+
+#: src/builtincmd.c:1335
+msgid ""
+"User is already logged in. Tell him to rejoin to gain all his new rights.\n"
+msgstr ""
+"Användaren är redan inloggad. Tala om för honom/henne att logga ut och in "
+"igen för att de nya rättigheterna ska börja gälla.\n"
+
+#: src/builtincmd.c:1353
+#, c-format
+msgid "User account %s does not exist.\n"
+msgstr "Användarkontot %s finns inte.\n"
+
+#: src/builtincmd.c:1359
+#, c-format
+msgid "You are not allowed to delete user %s.\n"
+msgstr "Du har inte rätt att ta bort användare %s.\n"
+
+#: src/builtincmd.c:1364
+#, c-format
+msgid "User account %s deleted.\n"
+msgstr "Användarkontot %s är borttaget.\n"
+
+#: src/builtincmd.c:1368
+msgid ""
+"User is still logged in with all rights of the deleted account. Kick the "
+"user to take them away.\n"
+msgstr ""
+"Användaren är fortfarande inloggad med sina tidigare rättigheter. Du måste "
+"kicka användaren för att de ska tas bort.\n"
+
+#: src/builtincmd.c:1397
+#, c-format
+msgid "User information for user %s\n"
+msgstr "Användarinformation för %s\n"
+
+#: src/builtincmd.c:1401
+#, c-format
+msgid "Group %s, Rights: "
+msgstr "Grupp %s, Rättigheter: "
+
+#: src/builtincmd.c:1406
+msgid "Users password is NOT set.\n"
+msgstr "Användarens lösenord är INTE skapat.\n"
+
+#: src/builtincmd.c:1407
+#, c-format
+msgid "User was registered by %s on %s"
+msgstr "Användaren blev registrerad av %s den %s"
+
+#: src/builtincmd.c:1415
+#, c-format
+msgid ", last login %s from %s"
+msgstr ", senaste inloggning %s från %s"
+
+#: src/builtincmd.c:1422
+msgid ", never logged in.\n"
+msgstr ", har aldrig loggat in.\n"
+
+#: src/builtincmd.c:1428
+#, c-format
+msgid "Using Client %s version %s\n"
+msgstr "Använder klient %s version %s\n"
+
+#: src/builtincmd.c:1446
+#, c-format
+msgid "IP: %s Hubs: (%u, %u, %u), Slots %u\n"
+msgstr "IP: %s Hubbar: (%u, %u, %u), Slottar %u\n"
+
+#: src/builtincmd.c:1451
+#, c-format
+msgid "IP location %s (%s)\n"
+msgstr "IP plats %s (%s)\n"
+
+#: src/builtincmd.c:1454
+msgid "IP location unknown\n"
+msgstr "IP plats okänd\n"
+
+#: src/builtincmd.c:1469
+#, c-format
+msgid "Usage: %s <nick> <group>"
+msgstr "Användning: %s <nick> <group>"
+
+#: src/builtincmd.c:1479
+#, c-format
+msgid "Group %s does not exist."
+msgstr "Gruppen %s finns inte."
+
+#: src/builtincmd.c:1485
+msgid "You are not allowed to remove a user from this group.\n"
+msgstr "Du har inte rätt att ta bort användare från den här gruppen.\n"
+
+#: src/builtincmd.c:1501
+#, c-format
+msgid "Moved user %s from group %s to %s\n"
+msgstr "Flyttade användare %s från grupp %s till %s\n"
+
+#: src/builtincmd.c:1517
+#, c-format
+msgid ""
+"Usage: %s [<nick>] <password>\n"
+" If no nick is specified, your own password is changed."
+msgstr ""
+"Användning: %s [<nick>] <password>\n"
+" Anges inget användarnamn ändras ditt eget lösenord."
+
+#: src/builtincmd.c:1531 src/builtincmd.c:1596
+#, c-format
+msgid "You are not allowed to change %s's password\n"
+msgstr "Du har inte rätt att ändra lösenordet för %s \n"
+
+#: src/builtincmd.c:1540
+msgid ""
+"The password is unacceptable, please choose another. You specified a known "
+"account name as your password.\n"
+msgstr ""
+"Det lösenordet kan inte accepteras, du måste välja ett annat. Du har använt "
+"ett känt användarnamn som ditt lösenord.\n"
+
+#: src/builtincmd.c:1547
+msgid ""
+"The password is unacceptable, please choose another. You specified a logged "
+"in username as your password.\n"
+msgstr ""
+"Det lösenordet kan inte accepteras, du måste välja ett annat. Du har använt "
+"en inloggad användares namn som lösenord.\n"
+
+#: src/builtincmd.c:1552 src/builtincmd.c:1604
+#, c-format
+msgid "No account for user %s.\n"
+msgstr "Konto saknas för användare %s.\n"
+
+#: src/builtincmd.c:1560
+#, c-format
+msgid ""
+"The password is unacceptable, please choose another. Minimum length is %d\n"
+msgstr ""
+"Det lösenordet kan inte accepteras, du måste välja ett annat. Minsta antal "
+"tecken är %d\n"
+
+#: src/builtincmd.c:1567 src/builtincmd.c:1627
+msgid "Password set.\n"
+msgstr "Lösenord skapat.\n"
+
+#: src/builtincmd.c:1583
+#, c-format
+msgid ""
+"Usage: %s [<nick>]\n"
+" If no nick is specified, your own password is changed."
+msgstr ""
+"Användning: %s [<nick>]\n"
+" Anges inget användarnamn är det ditt eget som ändras."
+
+#: src/builtincmd.c:1617
+#, c-format
+msgid ""
+"Your password was reset. It is now\n"
+"%.*s\n"
+msgstr ""
+"Ditt lösenord är ändrat, det är nu\n"
+"%.*s\n"
+
+#: src/builtincmd.c:1621
+#, c-format
+msgid ""
+"The password of %s was reset. It is now\n"
+"%.*s\n"
+msgstr ""
+"Lösenordet för %s är ändrat. Nytt lösenord är\n"
+"%.*s\n"
+
+#: src/builtincmd.c:1677
+#, c-format
+msgid "Local is determined by variable %s and set to %s\n"
+msgstr "Locale bestäms av variabel %s och är satt till %s\n"
+
+#: src/builtincmd.c:1679
+#, c-format
+msgid "Locale is set to %s\n"
+msgstr "Locale är satt till %s\n"
+
+#: src/builtincmd.c:1685
+#, c-format
+msgid ""
+"WARNING: decimal point is '%c', this will cause problems in parsing tags. "
+"Set LC_NUMERIC to \"C\""
+msgstr ""
+"VARNING: decimalpunkt är '%c', detta kommer att skapa problem med tolkningen "
+"av taggar. Sätt LC_NUMERIC till \"C\""
+
+#: src/builtincmd.c:1767 src/builtincmd.c:1935
+#, c-format
+msgid "%s !Unknown Type!\n"
+msgstr "%s !Okänt värde!\n"
+
+#: src/builtincmd.c:1786 src/builtincmd.c:1818 src/builtincmd.c:1848
+#: src/builtincmd.c:1965
+#, c-format
+msgid "Sorry, unknown configuration value %s\n"
+msgstr "Tyvärr, inställningsvärde %s finns inte \n"
+
+#: src/builtincmd.c:1842
+#, c-format
+msgid "Usage: %s <setting> <value>"
+msgstr "Användning: %s <setting> <value>"
+
+#: src/builtincmd.c:1879
+msgid "You are not allowed to assign: "
+msgstr "Du har inte rätt att tilldela: "
+
+#: src/builtincmd.c:1885
+msgid "You are not allowed to remove: "
+msgstr "Du har inte rätt att ta bort: "
+
+#: src/builtincmd.c:1913
+#, c-format
+msgid "\"%s\" is not a valid IP address.\n"
+msgstr "\"%s\" är inte en giltig IP adress.\n"
+
+#: src/builtincmd.c:1924
+#, c-format
+msgid "The maximum value for this element is %s\n"
+msgstr "Max värde för detta är %s\n"
+
+#: src/builtincmd.c:1939
+msgid "Configuration change denied.\n"
+msgstr "Konfigurationsändringen nekades.\n"
+
+#: src/builtincmd.c:1997
+#, c-format
+msgid "Sorry, unknown statistics value %s\n"
+msgstr "Tyvärr, statistikvärde %s finns inte\n"
+
+#: src/builtincmd.c:2020
+msgid "All Data saved."
+msgstr "Inställningarna är sparade."
+
+#: src/builtincmd.c:2033
+msgid "Data reloaded."
+msgstr "Inställningarna är inlästa."
+
+#: src/builtincmd.c:2049
+msgid "Errors during autosave:\n"
+msgstr "Fel under autosave:\n"
+
+#: src/builtincmd.c:2072
+msgid "Minimum length of a password."
+msgstr "Minsta tillåtna längd på lösenord."
+
+#: src/builtincmd.c:2073
+msgid "Period for autosaving settings, set to 0 to disable."
+msgstr ""
+"Tid för att automatiskt spara inställningar, ange 0 för att stänga av "
+"funktionen."
+
+#: src/builtincmd.c:2074
+msgid "User to send report to. Can be a chatroom."
+msgstr "Användare att skicka rapporter till. Kan vara ett chattrum."
+
+#: src/builtincmd.c:2075
+msgid ""
+"This is the maximum bantime you can give with a kick (and using _ban_). This "
+"does not affect someone with the ban right."
+msgstr ""
+"Det här är den längsta tiden som någon kan bli bannad med kickkommandot (och "
+"med _ban_). Detta gäller inte de som har rättigheten ban."
+
+#: src/builtincmd.c:2076
+msgid ""
+"If set, then a user without the ban right can use _ban_ to ban anyway. The "
+"maximum time can be set with kickmaxbantime."
+msgstr ""
+"Om denna är aktiverad kan användare utan banrättighet använda _ban_ för att "
+"banna ändå. Den längsta tid som kan användas anges med kickmaxbantime."
+
+#: src/builtincmd.c:2079
+msgid "Make the HubSec say something."
+msgstr "Gör så att HubSec pratar."
+
+#: src/builtincmd.c:2080
+msgid "Make the HubSec warn user."
+msgstr "Gör så att HubSec varnar en användare."
+
+#: src/builtincmd.c:2081
+msgid "Shut the hub down."
+msgstr "Stänger ner hubben."
+
+#: src/builtincmd.c:2082
+msgid "Send a report to the OPs."
+msgstr "Skickar en rapport till OP:arna."
+
+#: src/builtincmd.c:2083
+msgid "Displays the Aquila version."
+msgstr "Visar Aquila versionen."
+
+#: src/builtincmd.c:2084
+msgid "Shows you your IP address."
+msgstr "Visar dig din IP adress."
+
+#: src/builtincmd.c:2085
+msgid "Kick a user. Automatic short ban included."
+msgstr "Kickar en användare. Automatiskt korttidsbannad."
+
+#: src/builtincmd.c:2086
+msgid "Drop a user. Automatic short ban included."
+msgstr "Droppar en användare. Automatiskt korttidsbannad."
+
+#: src/builtincmd.c:2087
+msgid "IP Ban a user by IP address."
+msgstr "Bannar en användares IP."
+
+#: src/builtincmd.c:2088
+msgid "Nick ban a user by nick."
+msgstr "Bannar en användares namn."
+
+#: src/builtincmd.c:2089
+msgid "Ban a user by nick."
+msgstr "Bannar en användare."
+
+#: src/builtincmd.c:2090
+msgid "Show ban by nick/IP."
+msgstr "Visar ban med användarnamn/IP."
+
+#: src/builtincmd.c:2091
+msgid "Display help message."
+msgstr "Visar hjälptexten."
+
+#: src/builtincmd.c:2092
+msgid "Unban a nick."
+msgstr "Tar bort ban för ett användarnamn."
+
+#: src/builtincmd.c:2093
+msgid "Unban an ip."
+msgstr "Tar bort ban för ett IP."
+
+#: src/builtincmd.c:2094
+msgid "Hardban an IP."
+msgstr "Hårdbannar ett IP."
+
+#: src/builtincmd.c:2095
+msgid "Unhardban an IP."
+msgstr "Tar bort hårdban for ett IP."
+
+#: src/builtincmd.c:2096
+msgid "Show hard bans by nick/IP."
+msgstr "Visar hårdbans med nick/IP."
+
+#: src/builtincmd.c:2097
+msgid "Zombie a user. Can't talk or pm."
+msgstr ""
+"Gör en användare till en Zombie. Han kan varken skriva i main eller skicka "
+"PM."
+
+#: src/builtincmd.c:2098
+msgid "Show the zombie horde."
+msgstr "Visar alla zombies."
+
+#: src/builtincmd.c:2099
+msgid "Unzombie a user. Can talk or pm again."
+msgstr ""
+"Återställer en zombie till normal användare. Han kan skriva i main och "
+"skicka PM igen."
+
+#: src/builtincmd.c:2100
+msgid "Returns the user using the IP."
+msgstr "Returnerar de användare som har det IP numret."
+
+#: src/builtincmd.c:2102
+msgid "Send a private message to all users."
+msgstr "Skickar ett PM till alla användare."
+
+#: src/builtincmd.c:2104
+msgid "Create a custom right."
+msgstr "Skapa en specialrättighet."
+
+#: src/builtincmd.c:2105
+msgid "Destroy a custom right."
+msgstr "Ta bort en specialrättighet."
+
+#: src/builtincmd.c:2107
+msgid "Add a user group."
+msgstr "Skapar en ny användargrupp."
+
+#: src/builtincmd.c:2108
+msgid "Delete a user group."
+msgstr "Tar bort en användargrupp."
+
+#: src/builtincmd.c:2109
+msgid "Edit the rights of a user group."
+msgstr "Modifierar en grupps rättigheter."
+
+#: src/builtincmd.c:2110
+msgid "List all groups with their rights."
+msgstr "Listar alla grupper och deras rättigheter."
+
+#: src/builtincmd.c:2112
+msgid "Add a user."
+msgstr "Skapar en ny användare."
+
+#: src/builtincmd.c:2113
+msgid "Delete a user."
+msgstr "Tar bort en användare."
+
+#: src/builtincmd.c:2114
+msgid "Edit the extra rights of a user."
+msgstr "Modifierar en användares extra rättigheter."
+
+#: src/builtincmd.c:2115
+msgid "List all users of a user group."
+msgstr "Listar alla användare i en grupp."
+
+#: src/builtincmd.c:2116
+msgid "Show information of user."
+msgstr "Visar information om en användare."
+
+#: src/builtincmd.c:2117
+msgid "Move user to new group. Reconnect for change to activate."
+msgstr ""
+"Flyttar en användare till en annan grupp. Logga ut och in igen för att "
+"förändringen ska träda i kraft."
+
+#: src/builtincmd.c:2119
+msgid "Show configuration."
+msgstr "Visa inställningarna."
+
+#: src/builtincmd.c:2120
+msgid "Show configuration value help string."
+msgstr "Visa inställningarnas hjälptext."
+
+#: src/builtincmd.c:2121 src/builtincmd.c:2122
+msgid "Set configuration values."
+msgstr "Ange inställningsvärden."
+
+#: src/builtincmd.c:2124
+msgid "Show raw statistics."
+msgstr "Visa all statistik."
+
+#: src/builtincmd.c:2125
+msgid "Show statistics help."
+msgstr "Visa statistik hjälp."
+
+#: src/builtincmd.c:2127
+msgid ""
+"Reload all data from files. WARNING: All unsaved changes will be discarded."
+msgstr ""
+"Laddar in alla inställningar från fil. VARNING: Alla ändringar som inte "
+"sparats försvinner."
+
+#: src/builtincmd.c:2128
+msgid ""
+"Save all changes to file. WARNING: All previously saved settings will be "
+"lost!"
+msgstr ""
+"Sparar alla inställningar till fil. VARNING: Skriver över alla gamla "
+"inställningar!"
+
+#: src/builtincmd.c:2130
+msgid "Change your password."
+msgstr "Ändra ditt lösenord."
+
+#: src/builtincmd.c:2131
+msgid "Let the hub generate a random password."
+msgstr "Låt hubben skapa ett slumpmässigt lösenord."
+
+#: src/builtincmd.c:2134
+msgid "Set the locale of the hub."
+msgstr "Sätt Locale för hubben"
+
+#: src/builtincmd.c:2135
+msgid "Get the locale of the hub."
+msgstr "Visa Locale för hubben"
+
+#: src/builtincmd.c:2139 src/builtincmd.c:2141
+msgid "Let the hub CRASH!."
+msgstr "CRASHA hubben!."
+
+#: src/commands.c:63
+msgid "No help available."
+msgstr "Ingen hjälp tillgänglig."
+
+#: src/commands.c:248
+#, c-format
+msgid "Command not found: %s\n"
+msgstr "Kommandot %s finns inte\n"
+
+#: src/nmdc_protocol.c:96 src/nmdc_protocol.c:271
+msgid ""
+"Your IP has been used to attack this hub. This means one of the other hubs "
+"you are in is being exploited."
+msgstr ""
+"Ditt IP har använts för att attackera den här hubben. Detta betyder att en "
+"av de andra hubbarna som du är i har blivit utnyttjad för en attack."
+
+#: src/nmdc_protocol.c:98 src/nmdc_protocol.c:273
+msgid "CTM Exploit."
+msgstr "CTM Exploit."
+
+#: src/nmdc_protocol.c:116
+#, c-format
+msgid "<%s> This hub is running %s Version %s (Uptime %s.%.3lu).|"
+msgstr "<%s> Den här hubben kör %s version %s (Uptime %s.%.3lu).|"
+
+#: src/nmdc_protocol.c:121 src/nmdc_protocol.c:389
+#, c-format
+msgid "<%s> Do not reconnect too fast, time remaining: %s|"
+msgstr ""
+"<%s> Återanslut inte så fort, återstående tid tills du kan ansluta igen: %s|"
+
+#: src/nmdc_protocol.c:260
+msgid "Protocol violation: Bad key."
+msgstr "Protocol violation: Bad key."
+
+#: src/nmdc_protocol.c:317 src/nmdc_protocol.c:379
+msgid "Nickname refused due to unacceptable characters."
+msgstr "Ditt användarnamn innehåller tecken som inte är tillåtna."
+
+#: src/nmdc_protocol.c:334 src/nmdc_protocol.c:405 src/nmdc_protocol.c:661
+msgid "Your nickname is already in use."
+msgstr "En annan användare med samma namn är redan inloggad."
+
+#: src/nmdc_protocol.c:361
+msgid "Your account priviliges will not be awarded until you set a password."
+msgstr ""
+"Dina rättigheter börjar inte gälla förrän du skapat ett lösenord till dig."
+
+#: src/nmdc_protocol.c:413 src/nmdc_protocol.c:562 src/nmdc_protocol.c:669
+msgid "Another instance of you is connecting, bye!"
+msgstr "Du ansluter med en annan klient, hejdå!"
+
+#: src/nmdc_protocol.c:415 src/nmdc_protocol.c:564 src/nmdc_protocol.c:671
+msgid "Reconnecting."
+msgstr "Återansluter"
+
+#: src/nmdc_protocol.c:426
+msgid ""
+"Cloning is not allowed. Another user is already logged in from this IP "
+"address."
+msgstr ""
+"Dubbla anslutningar med samma IP nummer tillåts inte. En annan användare med "
+"samma IP som du är redan inloggad."
+
+#: src/nmdc_protocol.c:434
+msgid "Do not reconnect too fast."
+msgstr "Återanslut inte för fort."
+
+#: src/nmdc_protocol.c:448 src/nmdc_protocol.c:472 src/nmdc_protocol.c:610
+#, c-format
+msgid "<%s> You have been banned by %s because: "
+msgstr "<%s> Du har blivit bannad av %s på grund av: "
+
+#: src/nmdc_protocol.c:452 src/nmdc_protocol.c:476 src/nmdc_protocol.c:614
+#, c-format
+msgid "<%s> Time remaining %s|"
+msgstr "<%s> Återståemnde tid %s|"
+
+#: src/nmdc_protocol.c:459 src/nmdc_protocol.c:483 src/nmdc_protocol.c:621
+msgid "Banned."
+msgstr "Bannad."
+
+#: src/nmdc_protocol.c:537 src/nmdc_protocol.c:540
+msgid "Bad password."
+msgstr "Fel lösenord"
+
+#: src/nmdc_protocol.c:546
+msgid "Password retry overflow."
+msgstr "För många felaktiga försök"
+
+#: src/nmdc_protocol.c:593
+msgid ""
+"Your account priviliges will not be awarded until you set a password. Use !"
+"passwd or !pwgen."
+msgstr ""
+"Dina rättigheter börjar inte gälla förrän du skapar ett lösenord till dig. "
+"Använd !passwd eller !pwgen."
+
+#: src/nmdc_protocol.c:689 src/nmdc_protocol.c:954
+msgid "WARNING: You should use a client that uses tags!"
+msgstr "Varning: Använd en klient som visar tagg"
+
+#: src/nmdc_protocol.c:695 src/nmdc_protocol.c:963
+msgid "This hub requires tags, please upgrade to a client that supports them."
+msgstr ""
+"Den här hubben kräver tagg, var vänlig uppgradera till en klient som visar "
+"tagg."
+
+#: src/nmdc_protocol.c:704
+msgid "Your login was refused, your MyINFO seems corrupt."
+msgstr ""
+"Du nekades inloggning på grund av att den MyINFO din klient sänder är "
+"felaktig"
+
+#: src/nmdc_protocol.c:729 src/nmdc_protocol.c:824
+msgid "Your login was refused."
+msgstr "Du nekades inloggning"
+
+#: src/nmdc_protocol.c:849
+msgid "You are not allowed to chat."
+msgstr "Du har inte rätt att skriva i main"
+
+#: src/nmdc_protocol.c:855
+msgid "Think before you talk and don't spam."
+msgstr "Tänk innan du talar, och undvik att spamma."
+
+#: src/nmdc_protocol.c:863
+msgid "Your chat message was too long."
+msgstr "Ditt meddelande var för långt."
+
+#: src/nmdc_protocol.c:972
+msgid "Broken MyINFO, get lost."
+msgstr "Din klient sänder felaktig MyINFO, hejdå."
+
+#: src/nmdc_protocol.c:987
+msgid "Sorry, you no longer satisfy the necessary requirements for this hub."
+msgstr "Tyvärr, du uppfyller inte längre kraven för den här hubben."
+
+#: src/nmdc_protocol.c:1077
+#, c-format
+msgid "Active searches are limited to %u every %u seconds."
+msgstr "Aktiva sökningar är begränsade till %u varje %u sekunder."
+
+#: src/nmdc_protocol.c:1080
+#, c-format
+msgid "Passive searches are limited to %u every %u seconds."
+msgstr "Passiva sökningar är begränsade till %u varje %u sekunder."
+
+#: src/nmdc_protocol.c:1090
+msgid "Your search message is too long."
+msgstr "Ditt sökbegrepp är för långt."
+
+#: src/nmdc_protocol.c:1107
+msgid "You claim to be active. Passive search DENIED."
+msgstr "Du påstår dig vara aktiv. Passiva sökningar tillåts ej."
+
+#: src/nmdc_protocol.c:1123
+msgid "You claim to be passive. Active search DENIED."
+msgstr "Du påstår dig vara passiv. Aktiva sökningar tillåts ej."
+
+#: src/nmdc_protocol.c:1142
+#, c-format
+msgid "Your client uses IP %s for searching, while you have IP %s\n"
+msgstr "Din klient använder IP %s vid sökning, men du har %s\n"
+
+#: src/nmdc_protocol.c:1159
+#, c-format
+msgid "Do not repeat searches within %d seconds."
+msgstr "Upprepa inte samma sökning oftare än %d sekunder."
+
+#: src/nmdc_protocol.c:1341 src/nmdc_protocol.c:1420
+msgid "You are not allowed to download."
+msgstr "Du har inte rätt att ladda ner."
+
+#: src/nmdc_protocol.c:1368 src/nmdc_protocol.c:1460
+#, c-format
+msgid "You cannot download from %s."
+msgstr "Du kan inte ladda ner från %s."
+
+#: src/nmdc_protocol.c:1389
+#, c-format
+msgid "Your client uses IP %s for downloading, while you have IP %s\n"
+msgstr "Din klient använder IP %s vid nerladdning, men du har %s\n"
+
+#: src/nmdc_protocol.c:1491
+msgid "You are not allowed to send private messages."
+msgstr "Du har inte rätt att skicka PM."
+
+#: src/nmdc_protocol.c:1500
+msgid "Don't send private messages so fast."
+msgstr "Skicka inte PM så ofta"
+
+#: src/nmdc_protocol.c:1530
+msgid "Bad From: nick. No faking."
+msgstr "Felaktigt From: nick. Fuska inte."
+
+#: src/nmdc_protocol.c:1532
+msgid "Attempted PM faking."
+msgstr "Försök till PM fusk."
+
+#: src/nmdc_protocol.c:1551
+msgid "Bad display nick. No faking."
+msgstr "Felaktigt användarnamn. Fuska inte."
+
+#: src/nmdc_protocol.c:1553
+msgid "Attempted display nick faking"
+msgstr "Försök till fusk med användarnamn."
+
+#: src/nmdc_protocol.c:1567
+msgid "Sorry, you can only send private messages to operators."
+msgstr "Tyvärr, du har enbart rätt att skicka PM till OP's"
+
+#: src/nmdc_protocol.c:1600
+msgid "You are not allowed to redirect users."
+msgstr "Du har inte rätt att vidarebefodra användare"
+
+#: src/nmdc_protocol.c:1680 src/nmdc_protocol.c:1738
+msgid "Redirect refused.\n"
+msgstr "Vidarebefodran nekades.\n"
+
+#: src/nmdc_protocol.c:1709
+msgid "You are not allowed to kick users."
+msgstr "Du har inte rätt att kicka användare."
+
+#: src/nmdc_protocol.c:1733
+msgid "You were kicked."
+msgstr "Du är kickad."
+
+#: src/nmdc_protocol.c:1759
+msgid "Think before you ask HubINFO and don't spam.\n"
+msgstr "Tänk innan du frågar HubINFO och undvik att spamma.\n"
+
+#: src/nmdc_protocol.c:1825
+#, c-format
+msgid "Userlist request denied. Maximum 1 reload per %ds."
+msgstr "Nerladdning av användarlistan nekades. Max 1 nerladdning per %ds."
+
+#: src/nmdc_interface.c:962
+#, c-format
+msgid "Rate Probation Violation (Last: %s)."
+msgstr "Rate Probation Violation (Last: %s)."
+
+#: src/nmdc_interface.c:966
+#, c-format
+msgid "Rate Violation (Last: %s)."
+msgstr "Rate Violation (Last: %s)."
+
+#: src/nmdc_interface.c:985
+#, c-format
+msgid "Flood detected: %s (%s) was banned: %.*s (Last violation: %s)\n"
+msgstr "Försök till floodning upptäckt: %s (%s) bannades: %.*s (Sista : %s)\n"
+
+#: src/nmdc_interface.c:1008 src/nmdc_interface.c:1038
+msgid "WARNING: "
+msgstr "VARNING: "
+
+#: src/nmdc_interface.c:1209
+msgid ""
+"Period of chat messages. This controls how often a user can send a chat "
+"message. Keep this low."
+msgstr ""
+"Tidsperiod för chatt. Detta styr hur ofta en användare kan skriva i main. "
+"Använd låga värden."
+
+#: src/nmdc_interface.c:1212
+msgid ""
+"Burst of chat messages. This controls how many chat messages a user can "
+"'save up'. Keep this low."
+msgstr ""
+"Antal chattrader. Detta styr hur många chattrader en användare kan 'spara "
+"ifatt'. Använd låga värden."
+
+#: src/nmdc_interface.c:1215
+msgid ""
+"Period of searches. This controls how often an active user can search. Keep "
+"this reasonable."
+msgstr ""
+"Tidsperiod för sökningar. Detta styr hur ofta en aktiv användare kan söka."
+"Använd rimliga värden."
+
+#: src/nmdc_interface.c:1218
+msgid ""
+"Burst of searches. This controls how many searches an active user can 'save "
+"up'. Keep this low."
+msgstr ""
+"Antal sökningar. Detta styr hur många sökningar en aktiv användare kan "
+"'spara ifatt'. Använd låga värden."
+
+#: src/nmdc_interface.c:1221
+msgid ""
+"Period of searches. This controls how often a passive user can search. Keep "
+"this reasonable."
+msgstr ""
+"Tidsperiod för sökningar. Detta styr hur ofta en passiv användare kan söka."
+"Använd rimliga värden."
+
+#: src/nmdc_interface.c:1224
+msgid ""
+"Burst of searches. This controls how many searches a passive user can 'save "
+"up'. Keep this low."
+msgstr ""
+"Antal sökningar. Detta styr hur många sökningar en passiv användare kan "
+"'spara ifatt'. Använd låga värden."
+
+#: src/nmdc_interface.c:1227
+msgid ""
+"Period of MyINFO messages. This controls how often a user can send a MyINFO "
+"message that is send to everyone. Keep this very high."
+msgstr ""
+"Tidsperiod för MyInfo meddelanden. Detta styr hur ofta en användare kan "
+"skicka ett MyINFO meddelande som sänds till alla. Använd väldigt höga värden."
+
+#: src/nmdc_interface.c:1230
+msgid ""
+"Burst of MyINFO messages. This controls how many MyINFO messages a user can "
+"'save up' (everyone). Keep this at 1."
+msgstr ""
+"Antal MyINFO meddelanden. Detta styr hur många MyINFO meddelanden en "
+"användare kan 'spara ifatt' (alla). Ska vara 1."
+
+#: src/nmdc_interface.c:1233
+msgid ""
+"Period of MyINFO messages. This controls how often a user can send a MyINFO "
+"message that is send on to the ops only. Keep this very high."
+msgstr ""
+"Tidsperiod för MyInfo meddelanden. Detta styr hur ofta en användare kan "
+"skicka ett MyINFO meddelande som sänds enbart till OPs. Använd väldigt höga "
+"värden."
+
+#: src/nmdc_interface.c:1236
+msgid ""
+"Burst of MyINFO messages. This controls how many MyINFO messages a user can "
+"'save up' (OPs messages only). Keep this at 1."
+msgstr ""
+"Antal MyINFO meddelanden. Detta styr hur många MyINFO meddelanden en "
+"användare kan 'spara ifatt' (för OPs). Ska vara 1."
+
+#: src/nmdc_interface.c:1239
+msgid ""
+"Period of nicklist requests. This controls how often a user can refresh his "
+"userlist. Keep this high."
+msgstr ""
+"Tidsperiod för nerladdning av användarlistan. Detta styr hur ofta en "
+"användare kan refresha sin användarlista. Använd höga värden."
+
+#: src/nmdc_interface.c:1242
+msgid ""
+"Burst of nicklist requests. This controls how many userlist refreshes a user "
+"can 'save up'. Keep this at 1."
+msgstr ""
+"Antal nerladdningar av användarlistan. Detta styr hur många listförnyelse en "
+"användare kan 'spara ifatt'. Ska vara 1."
+
+#: src/nmdc_interface.c:1245
+msgid ""
+"Period of getinfo requests. This controls how often a user can request info "
+"on a user. Keep this low."
+msgstr ""
+"Tidsperiod för getinfo förfrågningar. Detta styr hur ofta en användare kan "
+"begära info om en användare. Använd låga värden."
+
+#: src/nmdc_interface.c:1248
+msgid ""
+"Burst of getinfo requests. This controls how many getinfo requests a user "
+"can 'save up'."
+msgstr ""
+"Antal getinfo förfrågningar. Detta styr hur många förfrågningar en användare "
+"kan 'spara ifatt'."
+
+#: src/nmdc_interface.c:1251
+msgid ""
+"Period of downloads. This controls how often a user can initiate a download. "
+"Keep this low."
+msgstr ""
+"Tidsperiod för nerladdningar. Detta styr hur ofta en användare kan initiera "
+"en nerladdning. Använd låga värden."
+
+#: src/nmdc_interface.c:1254
+msgid ""
+"Burst of downloads. This controls how many downloads a user can 'save up'. "
+"Keep this reasonable."
+msgstr ""
+"Antal nerladdningar. Detta styr hur många nerladdningar en användare kan "
+"'spara ifatt'. Använd rimliga värden."
+
+#: src/nmdc_interface.c:1257
+msgid ""
+"Period of connects. This controls how often the connect counter is "
+"refreshed. Keep this low."
+msgstr ""
+"Tidsperiod för anslutningar. Detta styr hur ofta räknaren för anslutningar "
+"uppdateras. Använd låga värden."
+
+#: src/nmdc_interface.c:1260
+msgid ""
+"Burst of connects. This controls how many new user connects can be saved up "
+"in idle time. Keep this low."
+msgstr ""
+"Antal anslutningar. Detta styr hur många nya anslutningar som kan 'sparas "
+"ifatt'när hubben inte jobbar. Använd låga värden."
+
+#: src/nmdc_interface.c:1263
+msgid ""
+"Refill of connects. This controls how many new user connects are added each "
+"time the counter resets. Keep this low."
+msgstr ""
+"Påfyllning av anslutningar. Detta styr hur många nya anslutningar som läggs "
+"till varje gång räknaren återställs (dvs rate.connect.period). Använd låga "
+"värden."
+
+#: src/nmdc_interface.c:1267
+msgid ""
+"Period of passive search results. This controls how often the incoming "
+"passive search results counter is refreshed. Keep this low."
+msgstr ""
+"Tidsperiod för passiva sökningar. Detta styr hur ofta räknaren för "
+"inkommande passiva sökningar återställs. Använd låga värden."
+
+#: src/nmdc_interface.c:1270
+msgid ""
+"Burst of passive search results. This controls how many incoming passive "
+"search results can be saved up in idle time. Keep this equal to the search "
+"period."
+msgstr ""
+"Antal passiva sökresultat. Detta styr hur många inkommande passiva "
+"sökresultat som kan 'sparas ifatt' när hubben inte jobbar. Ska vara samma "
+"värde som för tidsperiod för passiv sökning."
+
+#: src/nmdc_interface.c:1273
+msgid ""
+"Refill of passive search results. This controls how many incoming passive "
+"search results are added each time the counter resets. Keep this low."
+msgstr ""
+"Påfyllning av passiva sökresultat. Detta styr hur många inkommande passiva "
+"sökresultat som fylls på varje gång räknaren återställs. Använd låga värden."
+
+#: src/nmdc_interface.c:1277
+msgid ""
+"Period of passive search results. This controls how often the outgoing "
+"passive search results counter is refreshed. Keep this low."
+msgstr ""
+"Tidsperiod för passiva sökresultat. Detta styr hur ofta räknaren för "
+"utgående passiva sökningar återställs. Använd låga värden."
+
+#: src/nmdc_interface.c:1280
+msgid ""
+"Burst of passive search results. This controls how many outgoing passive "
+"search results can be saved up in idle time. Keep this reasonably high."
+msgstr ""
+"Antal passiva sökresultat. Detta styr hur många utgående passiva sökresultat "
+"som kan 'sparas ifatt' när hubben inte jobbar. Använd lite högre värden."
+
+#: src/nmdc_interface.c:1283
+msgid ""
+"Refill of passive search results. This controls how many outgoing passive "
+"search results are added each time the counter resets. Keep this reasonably "
+"high."
+msgstr ""
+"Påfyllning av passiva sökresultat. Detta styr hur många utgående passiva "
+"sökresultat som fylls på varje gång räknaren återställs. Använd lite högre "
+"värden."
+
+#: src/nmdc_interface.c:1287
+msgid ""
+"Period of user warnings. This controls how often a warning is send to user "
+"that overstep limits."
+msgstr ""
+"Tidsperiod för användarvarningar. Detta styr hur ofta varningar skickas till "
+"användare som överskrider begränsningarna."
+
+#: src/nmdc_interface.c:1290
+msgid ""
+"Refill of user warnings. This controls how many warning a user gets within "
+"the period."
+msgstr ""
+"Påfyllning av användarvarningar. Detta styr hur många varningar en användare "
+"får under en tidsperiod."
+
+#: src/nmdc_interface.c:1293
+msgid ""
+"Burst of user warnings. This controls how many warnings a user that overstep "
+"limits can save up."
+msgstr ""
+"Antal varningar. Detta styr hur många varningar en användare som överskrider "
+"begränsningarna kan 'spara ifatt'"
+
+#: src/nmdc_interface.c:1297
+msgid ""
+"Period of user violations. This controls how often a warning is send to user "
+"that overstep limits."
+msgstr ""
+"Tidsperiod för användarbegränsningar. Detta styr hur ofta varningar skickas "
+"till användare som överskrider begränsningarna."
+
+#: src/nmdc_interface.c:1300
+msgid ""
+"Refill of user violations. This controls how many warning a user gets within "
+"the period."
+msgstr ""
+"Påfyllning av användarbegränsningar. Detta styr hur många varningar en "
+"användare får under en tidsperiod."
+
+#: src/nmdc_interface.c:1303
+msgid ""
+"Burst of user violations. This controls how many violations a user that "
+"overstep limits can save up."
+msgstr ""
+"Antal begränsningar. Detta styr hur många begränsningar en användare som "
+"överskrider gränserna kan 'spara ifatt'"
+
+#: src/nmdc_interface.c:1379
+msgid "Allow multiple users from the same IP address."
+msgstr "Tillåt flera användare med samma IP nummer."
+
+#: src/nmdc_interface.c:1381
+msgid "Maximum length of a chat message."
+msgstr "Max antal tecken i ett chattmeddelande."
+
+#: src/nmdc_interface.c:1383
+msgid "Maximum length of a search message."
+msgstr "Max antal tecken i en sökning."
+
+#: src/nmdc_interface.c:1385
+msgid "Maximum length of a search result"
+msgstr "Max längd på sökresultat"
+
+#: src/nmdc_interface.c:1388
+msgid "Minimum time before a re-search is considered valid."
+msgstr "Minsta tid förrän en repeterat sökning ska anses vara giltig."
+
+#: src/nmdc_interface.c:1390
+msgid "Period during which a search is considered a re-search."
+msgstr "Tidsperiod under vilken en sökning anses vara en repeterad sökning."
+
+#: src/nmdc_interface.c:1392
+msgid "Maximum number of searches cached."
+msgstr "Max antal sparade sökningar"
+
+#: src/nmdc_interface.c:1395
+msgid "This message is send to all banned users when they try to join."
+msgstr ""
+"Detta meddelande sänds till alla bannade användare när de försöker logga in "
+"i hubben."
+
+#: src/nmdc_interface.c:1398
+msgid "Online users never get timed out."
+msgstr ""
+
+#: src/nmdc_interface.c:1402
+msgid ""
+"These are the characters allowed in a nick. An empty string means all "
+"characters. Does NOT support utf-8 character."
+msgstr ""
+"Detta är de tillåtna tecknen i ett användarnamn. En tom sträng betyder att "
+"alla är tillåtna. Stöder INTE utf-8 tecken."
+
+#: src/plugin.c:191
+#, c-format
+msgid "You have been kicked by %s because: %.*s\n"
+msgstr "Du är kickad av %s på grund av: %.*s\n"
+
+#: src/plugin.c:224 src/plugin.c:354 src/plugin.c:387 src/plugin.c:420
+#, c-format
+msgid "You have been banned by %s because: %.*s\n"
+msgstr "Du är bannad av %s på grund av: %.*s\n"
+
+#: src/plugin.c:444
+#, c-format
+msgid "Found nick ban by %s for %s (IP %s) for %lus because: %.*s"
+msgstr ""
+"Hittade användarnamn bannat av %s för %s (IP %s) i %lus på grund av: %.*s"
+
+#: src/plugin.c:448
+#, c-format
+msgid "Found nick ban by %s for %s for %lus because: %.*s"
+msgstr "Hittade användarnamn bannat av %s för %s i %lus på grund av: %.*s"
+
+#: src/plugin.c:453
+#, c-format
+msgid "Found permanent nick ban by %s for %s (IP %s) because: %.*s"
+msgstr ""
+"Hittade permanent bannat användarnamn av %s för %s (IP %s) på grund av: %.*s"
+
+#: src/plugin.c:457
+#, c-format
+msgid "Found permanent nick ban by %s for %s because: %.*s"
+msgstr "Hittade permanent bannat användarnamn av %s för %s på grund av: %.*s"
+
+#: src/plugin.c:476 src/plugin.c:508
+#, c-format
+msgid "Found IP ban by %s for %s (%s) for %lus because: %.*s"
+msgstr "Hittade bannat IP av %s för %s (%s) i %lus på grund av: %.*s"
+
+#: src/plugin.c:480 src/plugin.c:512
+#, c-format
+msgid "Found IP ban by %s for %s for %lus because: %.*s"
+msgstr "Hittade bannat IP av %s för %s i %lus på grund av: %.*s"
+
+#: src/plugin.c:486 src/plugin.c:518
+#, c-format
+msgid "Found permanent ban by %s for %s (%s) because: %.*s"
+msgstr "Hittade permanent ban av %s för %s (%s) på grund av: %.*s"
+
+#: src/plugin.c:489 src/plugin.c:521
+#, c-format
+msgid "Found permanent ban by %s for %s because: %.*s"
+msgstr "Hittade permanent ban av %s för %s på grund av: %.*s"
+
+#: src/plugin.c:540 src/plugin.c:565
+#, c-format
+msgid "%s %s by %s Expires: %s Message: %.*s\n"
+msgstr "%s %s av %s Upphör: %s Meddelande: %.*s\n"
+
+#: src/plugin.c:543 src/plugin.c:568
+#, c-format
+msgid "%s %s by %s Message: %.*s\n"
+msgstr "%s %s av %s Meddelande: %.*s\n"
+
+#: src/plugin.c:1090
+#, c-format
+msgid "Error saving configuration to %s: %s\n"
+msgstr "Fel när konfigurationen skulle sparas till %s: %s\n"
+
+#: src/plugin.c:1120
+#, c-format
+msgid "Error loading configuration from %s: %s\n"
+msgstr "Fel när konfigurationen skulle läsas från %s: %s\n"
+
+#: src/utils.c:98
+#, c-format
+msgid "%u week, "
+msgid_plural "%u weeks, "
+msgstr[0] "%u vecka, "
+msgstr[1] "%u veckor, "
+
+#: src/utils.c:100
+#, c-format
+msgid "%u day, "
+msgid_plural "%u days, "
+msgstr[0] "%u dag, "
+msgstr[1] "%u dagar, "
+
+#: src/pi_statistics.c:127
+msgid "CPU Unknown\n"
+msgstr "Okänd CPU\n"
+
+#: src/pi_statistics.c:142
+#, c-format
+msgid "CPU%.1d: %.*s\n"
+msgstr "CPU%.1d: %.*s\n"
+
+#: src/pi_statistics.c:144
+#, c-format
+msgid "     Clock: %.*s MHz "
+msgstr "     Frekvens: %.*s MHz "
+
+#: src/pi_statistics.c:146
+#, c-format
+msgid "BogoMIPS: %.*s\n"
+msgstr "BogoMIPS: %.*s\n"
+
+#: src/pi_statistics.c:234 src/pi_statistics.c:416
+#, c-format
+msgid ""
+"\n"
+"Cpu Statistics at %s"
+msgstr ""
+"\n"
+"Cpu statistik för %s"
+
+#: src/pi_statistics.c:237 src/pi_statistics.c:419
+#, c-format
+msgid " last hour %2.2f%%\n"
+msgstr " sista timmen %2.2f%%\n"
+
+#: src/pi_statistics.c:241 src/pi_statistics.c:423
+#, c-format
+msgid " last minute %2.2f%%\n"
+msgstr " sista minuten %2.2f%%\n"
+
+#: src/pi_statistics.c:245 src/pi_statistics.c:427
+#, c-format
+msgid ""
+" last 5 seconds %2.2f%%\n"
+"\n"
+msgstr ""
+" sista 5 sekunderna %2.2f%%\n"
+"\n"
+
+#: src/pi_statistics.c:249 src/pi_statistics.c:431
+#, c-format
+msgid "Since boot %2.2f%%\n"
+msgstr "Sedan uppstart %2.2f%%\n"
+
+#: src/pi_statistics.c:536
+#, c-format
+msgid "Total traffic since boot: In %lu, Out %lu\n"
+msgstr "Total trafik sedan uppstart: In %lu, Ut %lu\n"
+
+#: src/pi_statistics.c:545
+#, c-format
+msgid "In last %lu ms: In %f kbps, Out %f kbps\n"
+msgstr "Under senaste %lu ms: In %f kbps, Ut %f kbps\n"
+
+#: src/pi_statistics.c:556
+#, c-format
+msgid "Average over %d seconds: In %f kbps, Out %f kbps\n"
+msgstr "I genomsnitt under %d sekunder: In %f kbps, Ut %f kbps\n"
+
+#: src/pi_statistics.c:598
+#, c-format
+msgid "Total Count: %lu, Total Memory: %lu\n"
+msgstr "Totalt antal: %lu, Totalt minne: %lu\n"
+
+#: src/pi_statistics.c:600
+#, c-format
+msgid ""
+"ZPipe users: %lu, ZLine users: %lu\n"
+"\n"
+msgstr ""
+"ZPipe användare: %lu, ZLine användare: %lu\n"
+"\n"
+
+#: src/pi_statistics.c:602
+#, c-format
+msgid "Nicklist cache (last updated %lu seconds ago).\n"
+msgstr "Nicklist cache (senast uppdaterad för %lu sekunder sedan).\n"
+
+#: src/pi_statistics.c:605
+#, c-format
+msgid "  Nicklist length %lu (zpipe %lu, zline %lu) [Estimate %lu, Size %lu]\n"
+msgstr ""
+"  Nicklist längd %lu (zpipe %lu, zline %lu) [Beräknad %lu, Storlek %lu]\n"
+
+#: src/pi_statistics.c:608
+#, c-format
+msgid "  Infolist length %lu (zpipe %lu, zline %lu) [Estimate %lu, Size %lu]\n"
+msgstr ""
+"  Infolist längd %lu (zpipe %lu, zline %lu) [Beräknad %lu, Storlek %lu]\n"
+
+#: src/pi_statistics.c:612
+#, c-format
+msgid "  Nicklist length %lu\n"
+msgstr "  Nicklist längd %lu\n"
+
+#: src/pi_statistics.c:613
+#, c-format
+msgid "  Infolist length %lu\n"
+msgstr "  Infolist längd %lu\n"
+
+#: src/pi_statistics.c:623
+msgid "Warning: DEBUG build, bandwidth measurements inaccurate.\n"
+msgstr "Varning: kompilerat med DEBUG, bandbreddsmätningar är inte exakta.\n"
+
+#: src/pi_statistics.c:641
+#, c-format
+msgid "Allocated size: %llu (max: %llu)\n"
+msgstr "Allokerad storlek: %llu (max: %llu)\n"
+
+#: src/pi_statistics.c:643
+msgid "Allocated size: %I64u (max: %I64u)\n"
+msgstr "Allokerad storlek: %I64u (max: %I64u)\n"
+
+#: src/pi_statistics.c:645
+#, c-format
+msgid "Allocated buffers: %lu (max %lu)\n"
+msgstr "Allokerade buffertar: %lu (max %lu)\n"
+
+#: src/pi_statistics.c:646
+#, c-format
+msgid " Users having buffered output: %lu\n"
+msgstr " Användare med buffrad data: %lu\n"
+
+#: src/pi_statistics.c:652
+msgid ""
+"\n"
+"Buffering clients:\n"
+msgstr ""
+"\n"
+"Buffrande klienter:\n"
+
+#: src/pi_statistics.c:659
+#, c-format
+msgid "Real user %s without socket?\n"
+msgstr "Riktig användare %s utan socket?\n"
+
+#: src/pi_statistics.c:672
+#, c-format
+msgid " %s (online: %s), %lu buffers, total %lu, offset %lu, credit %lu\n"
+msgstr " %s (online: %s), %lu buffertar, total %lu, offset %lu, kredit %lu\n"
+
+#: src/pi_statistics.c:683
+msgid " None.\n"
+msgstr " Ingen.\n"
+
+#: src/pi_statistics.c:687
+#, c-format
+msgid ""
+"\n"
+" Total found: %lu\n"
+" Total bytes queued %lu\n"
+" Average bufs %lu\n"
+" Average bytes queued %lu\n"
+" Average bytes to write %lu\n"
+msgstr ""
+"\n"
+" Totalt antal: %lu\n"
+" Totalt köade bytes  %lu\n"
+" Genomsnitt buffertar %lu\n"
+" Genomsnitt köade bytes %lu\n"
+" Genomsnitt bytes att skriva %lu\n"
+
+#: src/pi_statistics.c:699
+msgid "Warning: DEBUG build, cpu measurements higher as normal.\n"
+msgstr "Varning: kompilerat med DEBUG, cpumätningar är högre än normalt.\n"
+
+#: src/pi_statistics.c:744
+#, c-format
+msgid ""
+"Connection statistics:\n"
+"  Total IPs remembered (roughly last %us): %lu\n"
+"    Allowed connection attempts: %lu\n"
+"    Blocked connection attempts: %lu\n"
+msgstr ""
+"Anslutningsstatistik:\n"
+"  Totalt ihågkommna IPs (cirka senaste %us): %lu\n"
+"    Tillåtna anslutningsförsök: %lu\n"
+"    Blockerade anslutningsförsök: %lu\n"
+
+#: src/pi_statistics.c:760
+msgid "Memory Usage:\n"
+msgstr "Minnesanvändning:\n"
+
+#: src/pi_statistics.c:768
+msgid "GNU LibC memory statistics:\n"
+msgstr "GNU LibC minnesstatistik:\n"
+
+#: src/pi_statistics.c:769
+#, c-format
+msgid " Total heap     : %lu (%s)\n"
+msgstr " Totalt heap    : %lu (%s)\n"
+
+#: src/pi_statistics.c:770
+#, c-format
+msgid " # Free chunks    : %lu\n"
+msgstr " # Free chunks    : %lu\n"
+
+#: src/pi_statistics.c:771
+#, c-format
+msgid " # Fastbin blocks : %lu\n"
+msgstr " # Fastbin blocks : %lu\n"
+
+#: src/pi_statistics.c:772
+#, c-format
+msgid " Total alloced space : %lu (%s)\n"
+msgstr " Totalt allokerat utrymme : %lu (%s)\n"
+
+#: src/pi_statistics.c:774
+#, c-format
+msgid " Total free space    : %lu (%s)\n"
+msgstr " Totalt ledigt utrymme    : %lu (%s)\n"
+
+#: src/pi_statistics.c:776
+#, c-format
+msgid " keepcost : %lu (%s)\n"
+msgstr " keepcost : %lu (%s)\n"
+
+#: src/pi_statistics.c:777
+#, c-format
+msgid " # MMAP regions : %lu\n"
+msgstr " # MMAP regions : %lu\n"
+
+#: src/pi_statistics.c:778
+#, c-format
+msgid ""
+" MMAP space     : %lu (%s)\n"
+"\n"
+msgstr ""
+" MMAP space     : %lu (%s)\n"
+"\n"
+
+#: src/pi_statistics.c:782
+#, c-format
+msgid "%s stats:\n"
+msgstr "%s statistik:\n"
+
+#: src/pi_statistics.c:783
+#, c-format
+msgid " Buffering memory: %lu\n"
+msgstr " Buffertminne: %lu\n"
+
+#: src/pi_statistics.c:784
+#, c-format
+msgid " Cachelist size: %lu\n"
+msgstr " Cachelistans storlek: %lu\n"
+
+#: src/pi_statistics.c:795
+#, c-format
+msgid "Booted at %.*s, up %lu seconds (%s)\n"
+msgstr "Startad %.*s, igång i %lu sekunder (%s)\n"
+
+#: src/pi_statistics.c:885
+msgid "Show buffer stats."
+msgstr "Visa statistik för buffertanvändning."
+
+#: src/pi_statistics.c:886
+msgid "Show cache stats."
+msgstr "Visa statistik för cacheanvändning."
+
+#: src/pi_statistics.c:887
+msgid "Show bandwidth stats."
+msgstr "Visa statistik för bandbreddsanvändning."
+
+#: src/pi_statistics.c:888
+msgid "Show cpu usage stats."
+msgstr "Visa statistik för cpuanvändning."
+
+#: src/pi_statistics.c:890
+msgid "Show nmdc protocol stats. Experts only."
+msgstr "Visa nmdc protokollstatistik. Endast för nördar."
+
+#: src/pi_statistics.c:891
+msgid "Show memory usage stats."
+msgstr "Visa statistik för minnesanvändning."
+
+#: src/pi_statistics.c:892
+msgid "Show connection stats."
+msgstr "Visa statistik för anslutningar."
+
+#: src/pi_statistics.c:893
+msgid "Show uptime."
+msgstr "Visa upptid."
+
+#: src/pi_statistics.c:896
+msgid "Show iocp usage stats."
+msgstr "Visa statistik för iocpanvändning"
+
+#: src/pi_statistics.c:906
+msgid "This is the total size of memory allocated with sbrk by malloc (bytes)."
+msgstr ""
+"This is the total size of memory allocated with sbrk by malloc (bytes)."
+
+#: src/pi_statistics.c:908
+msgid "This is the number of chunks not in use."
+msgstr "This is the number of chunks not in use."
+
+#: src/pi_statistics.c:910
+msgid "This is the total number of chunks allocated with mmap."
+msgstr "This is the total number of chunks allocated with mmap."
+
+#: src/pi_statistics.c:912
+msgid "This is the total size of memory allocated with mmap (bytes)."
+msgstr "This is the total size of memory allocated with mmap (bytes)."
+
+#: src/pi_statistics.c:914
+msgid ""
+"This is the total size of memory occupied by chunks handed out by malloc."
+msgstr ""
+"This is the total size of memory occupied by chunks handed out by malloc."
+
+#: src/pi_statistics.c:916
+msgid "This is the total size of memory occupied by free (not in use) chunks."
+msgstr "This is the total size of memory occupied by free (not in use) chunks."
+
+#: src/pi_statistics.c:919
+msgid ""
+"This is the size of the top-most releasable chunk that normally borders the "
+"end of the heap."
+msgstr ""
+"This is the size of the top-most releasable chunk that normally borders the "
+"end of the heap."
+
+#: src/pi_chatlog.c:48
+msgid "No Chat History configured.\n"
+msgstr "Ingen chatthistorik inställd.\n"
+
+#: src/pi_chatlog.c:52
+msgid "Chat History:\n"
+msgstr "Chatthistorik:\n"
+
+#: src/pi_chatlog.c:120
+msgid "Maximum number of chat history lines."
+msgstr "Max antal chattrader i historiken."
+
+#: src/pi_chatlog.c:123
+msgid "Command returns last chatlines."
+msgstr "Kommandot returnerar senaste chattraderna."
+
+#: src/pi_chatroom.c:287
+#, c-format
+msgid ""
+"Usage: %s <room> <description> [<private>] [<autoreg>] [<autorights>] "
+"[<rights <rights>...>]\n"
+" supply the flag \"private\" if you want the room autojoin or invite only.\n"
+" supply the flag \"autoreg\" if you only want registered users to autojoin.\n"
+" supply the flag \"autorights\" if you to autojoin all users with correct "
+"rights.\n"
+" supply the flag \"rights\" if you want to autojoin users based on their "
+"rights, must be last argument!\n"
+" be sure to add a description between \". For an empty description, provide "
+"\"\"."
+msgstr ""
+"Användning: %s <room> <description> [<private>] [<autoreg>] [<autorights>] "
+"[<rights <rights>...>]\n"
+" ange flaggan \"private\" om du vill att rummet enbart ska vara för "
+"automatisk anslutning (autojoin) eller inbjudan.\n"
+" ange flaggan \"autoreg\" om du vill att enbart registrerade användare ska "
+"ansluta automatiskt (autojoin).\n"
+" ange flaggan \"autorights\" om du vill att alla användare med matchande "
+"rättighet automatiskt ska ansluta.\n"
+" ange flaggan \"rights\" om du vill att användare ska ansluta automatiskt "
+"beroende på deras rättigheter, måste anges som sista argument!\n"
+" var noga med att ange en beskrivning mellan \". För en tom beskrivning, "
+"ange \"\"."
+
+#: src/pi_chatroom.c:298
+#, c-format
+msgid "Chatroom name %s is too long. Max %d characters\n"
+msgstr "Chattrumnamn %s är för långt. Max %d antal tecken\n"
+
+#: src/pi_chatroom.c:303
+#, c-format
+msgid "Chatroom %s already exists."
+msgstr "Chattrum %s finns redan."
+
+#: src/pi_chatroom.c:308
+msgid "Spaces are not allowed in chatroom names."
+msgstr "Mellanslag är inte tillåtna i namn på chattrum."
+
+#: src/pi_chatroom.c:317
+msgid "Room is private.\n"
+msgstr "Chattrummet är privat.\n"
+
+#: src/pi_chatroom.c:323
+msgid "Room will autojoin registered users.\n"
+msgstr "Registrerade användare kommer automatiskt att delta i chattrummet.\n"
+
+#: src/pi_chatroom.c:329
+msgid "Room will autojoin users with sufficient rights.\n"
+msgstr ""
+"Användare med tillräckliga rättigheter kommer automatiskt att delta i "
+"chattrummet.\n"
+
+#: src/pi_chatroom.c:336
+#, c-format
+msgid "Ignoring unknown argument %s\n"
+msgstr "Ignorerar okänt argument %s\n"
+
+#: src/pi_chatroom.c:345
+msgid "Room requires: "
+msgstr "Chattrummet kräver: "
+
+#: src/pi_chatroom.c:357
+msgid "Room creation failed!\n"
+msgstr "Det gick inte att skapa chattrummet!\n"
+
+#: src/pi_chatroom.c:359
+#, c-format
+msgid "Room %s created successfully!\n"
+msgstr "Chattrum %s är skapat!\n"
+
+#: src/pi_chatroom.c:371
+#, c-format
+msgid "Usage: %s <room>\n"
+msgstr "Användning: %s <room<\n"
+
+#: src/pi_chatroom.c:377 src/pi_chatroom.c:414
+#, c-format
+msgid "Cannot find room %s\n"
+msgstr "Kan inte hitta chattrum %s\n"
+
+#: src/pi_chatroom.c:387
+#, c-format
+msgid "Room %s has %d users"
+msgstr "Chattrum %s har %d användare"
+
+#: src/pi_chatroom.c:389
+msgid ", is private"
+msgstr ", är privat"
+
+#: src/pi_chatroom.c:391
+msgid ", autojoins registered users"
+msgstr ", ansluter automatiskt registrerade användare"
+
+#: src/pi_chatroom.c:393
+msgid ", autojoins users with sufficient rights"
+msgstr ", ansluter automatiskt användare med tillräckliga rättigheter"
+
+#: src/pi_chatroom.c:395
+msgid " and requires rights "
+msgstr " och kräver följande rättigheter "
+
+#: src/pi_chatroom.c:606
+msgid "Add a chatroom."
+msgstr "Skapa ett chattrum."
+
+#: src/pi_chatroom.c:608
+msgid "Remove a chatroom."
+msgstr "Ta bort ett chattrum."
+
+#: src/pi_chatroom.c:610
+msgid "Lists available chatrooms."
+msgstr "Lista tillgängliga chattrum."
+
+#: src/pi_hublist.c:129
+msgid "No hublists configured\n"
+msgstr "Inga hubblistor konfigurerade\n"
+
+#: src/pi_hublist.c:159
+#, c-format
+msgid "Hublist update ERROR: %s: socket: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: socket: %s\n"
+
+#: src/pi_hublist.c:169 src/pi_hublist.c:172
+#, c-format
+msgid "Hublist update ERROR: %s: connect: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: connect: %s\n"
+
+#: src/pi_hublist.c:207
+#, c-format
+msgid "Hublist update ERROR: %s: read: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: read: %s\n"
+
+#: src/pi_hublist.c:219
+#, c-format
+msgid "Hublist update ERROR: %s: getsockname: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: getsockname: %s\n"
+
+#: src/pi_hublist.c:239
+#, c-format
+msgid "Hublist update ERROR: %s: illegal input %.*s\n"
+msgstr "Fel vid uppdatering av hublista: %s: illegal input %.*s\n"
+
+#: src/pi_hublist.c:308
+#, c-format
+msgid "Hublist update ERROR: %s: send: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: send: %s\n"
+
+#: src/pi_hublist.c:316
+#, c-format
+msgid "Registered at hublist %s\n"
+msgstr "Registrerad på hublista %s\n"
+
+#: src/pi_hublist.c:354
+#, c-format
+msgid "Hublist update ERROR: %s: %s.\n"
+msgstr "Fel vid uppdatering av hublista: %s: %s.\n"
+
+#: src/pi_hublist.c:385
+#, c-format
+msgid "Hublist update ERROR: %s: Timed out.\n"
+msgstr "Fel vid uppdatering av hublista: %s: Timed out.\n"
+
+#: src/pi_hublist.c:413
+msgid "Errors during hublist update:\n"
+msgstr "Fel vid uppdatering av hublista:\n"
+
+#: src/pi_hublist.c:463
+msgid "list of hublist addresses."
+msgstr "lista över hublistadresser."
+
+#: src/pi_hublist.c:465
+msgid "Interval of hublist updates."
+msgstr "Tidsintervall för uppdatering av hublistor."
+
+#: src/pi_hublist.c:467
+msgid ""
+"Do not report errors when hublist registration fails (Use with caution!)."
+msgstr ""
+"Rapportera inte fel vid uppdatering av hublistor (Används med försiktighet!)."
+
+#: src/pi_hublist.c:469
+msgid "Register at hublists."
+msgstr "Registrerar på hubblistor."
+
+#: src/pi_lua.c:176 src/pi_lua.c:251
+msgid "Unknown config value."
+msgstr "Okänt inställningsvärde."
+
+#: src/pi_lua.c:233 src/pi_lua.c:310
+msgid "Element Type not supported."
+msgstr "Element Type not supported."
+
+#: src/pi_lua.c:289 src/pi_lua.c:828 src/pi_lua.c:857 src/pi_lua.c:897
+#: src/pi_lua.c:912 src/pi_lua.c:980
+msgid "Not a valid IP address.\n"
+msgstr "Inte en giltig IP adress.\n"
+
+#: src/pi_lua.c:1657 src/pi_lua.c:1972 src/pi_lua.c:2521
+#, c-format
+msgid "LUA ERROR ('%s'): %s\n"
+msgstr "LUA ERROR ('%s'): %s\n"
+
+#: src/pi_lua.c:1806
+#, c-format
+msgid "LUA ERROR (Timer): %s\n"
+msgstr "LUA ERROR (Timer): %s\n"
+
+#: src/pi_lua.c:2003
+msgid "No such LUA function."
+msgstr "Den LUA funktionen finns inte."
+
+#: src/pi_lua.c:2011
+msgid "Command failed to register."
+msgstr "Kommandot kunde inte registreras."
+
+#: src/pi_lua.c:2019
+msgid "Could not allocate memory."
+msgstr "Kunde inte allokera minne."
+
+#: src/pi_lua.c:2291 src/pi_lua.c:2317
+#, c-format
+msgid "LUA ERROR: %s\n"
+msgstr "LUA fel: %s\n"
+
+#: src/pi_lua.c:2420
+#, c-format
+msgid ""
+"Lua stats\n"
+"Version: %s\n"
+"Scripts count/peak: %d/%d"
+msgstr ""
+"Lua statistik\n"
+"Version: %s\n"
+"Antal skript nu/max: %d/%d"
+
+#: src/pi_lua.c:2424
+msgid ""
+"\n"
+"No LUA scripts running.\n"
+msgstr ""
+"\n"
+"Inga LUA skript körs.\n"
+
+#: src/pi_lua.c:2428
+msgid ""
+"\n"
+"Running LUA scripts:\n"
+msgstr ""
+"\n"
+"Kör följande LUA skript:\n"
+
+#: src/pi_lua.c:2441 src/pi_lua.c:2459
+#, c-format
+msgid "Usage: %s <script>"
+msgstr "Användning: %s <script>"
+
+#: src/pi_lua.c:2446
+#, c-format
+msgid "Lua script '%s' loaded.\n"
+msgstr "Luaskript '%s' är laddat.\n"
+
+#: src/pi_lua.c:2448
+#, c-format
+msgid "Lua script '%s' failed to load.\n"
+msgstr "Luaskript '%s' kunde inte laddas.\n"
+
+#: src/pi_lua.c:2464
+#, c-format
+msgid "Lua script '%s' unloaded.\n"
+msgstr "Luaskript '%s' urladdat.\n"
+
+#: src/pi_lua.c:2466
+#, c-format
+msgid "Lua script '%s' not found.\n"
+msgstr "Luaskript '%s' hittas inte.\n"
+
+#: src/pi_lua.c:2662
+msgid "Show lua stats."
+msgstr "Visa LUA statistik."
+
+#: src/pi_lua.c:2663
+msgid "Load a lua script."
+msgstr "Ladda ett luaskript."
+
+#: src/pi_lua.c:2664
+msgid "Remove a lua script."
+msgstr "Ta bort ett luaskript."
+
+#: src/pi_trigger.c:793
+#, c-format
+msgid ""
+"Usage: %s <name> <type> <arg>\n"
+"   name: name of the trigger\n"
+"   type: one of:\n"
+"      - text : the trigger will dump the text provided in arg, \n"
+"      - file : the trigger will dump the contents of the file provided in "
+"arg\n"
+"\t- command : the trigger will dump the output of the command provided in "
+"arg\n"
+"   arg: depends on type\n"
+msgstr ""
+"Användning: %s <name> <type> <arg>\n"
+"   name: triggerns namn\n"
+"   type: en av:\n"
+"      - text : triggern visar texten som anges med arg, \n"
+"      - file : triggern visar innehållet i filen som anges med arg\n"
+"\t- command : triggern visar resultatet av kommandot som anges med arg\n"
+"   arg: beror på vilken typ som angetts\n"
+
+#: src/pi_trigger.c:804
+#, c-format
+msgid "Triggername %s is too long. Max %d characters\n"
+msgstr "Triggernamn %s är för långt. Max är %d tecken\n"
+
+#: src/pi_trigger.c:810
+#, c-format
+msgid "Triggername %s already exists."
+msgstr "Triggernamnet %s finns redan."
+
+#: src/pi_trigger.c:821
+#, c-format
+msgid "Unknown trigger type %s."
+msgstr "Okänd triggertyp %s."
+
+#: src/pi_trigger.c:827
+#, c-format
+msgid "Trigger %s created successfully."
+msgstr "Lyckades skapa triggern %s."
+
+#: src/pi_trigger.c:829
+#, c-format
+msgid "Trigger %s creation failed."
+msgstr "Lyckades inte skapa triggern %s."
+
+#: src/pi_trigger.c:840
+#, c-format
+msgid ""
+"Usage: %s <name>\n"
+"   name: name of the trigger\n"
+msgstr ""
+"Användning: %s <name>\n"
+"   name: triggerns namn\n"
+
+#: src/pi_trigger.c:846 src/pi_trigger.c:885 src/pi_trigger.c:976
+#, c-format
+msgid "Triggername %s doesn't exist."
+msgstr "Triggernamnet %s finns inte."
+
+#: src/pi_trigger.c:851
+#, c-format
+msgid "Trigger %s deleted."
+msgstr "Trigger %s har tagits bort."
+
+#: src/pi_trigger.c:860
+#, c-format
+msgid "Trigger %s dumps file %s (Hits %ld)\n"
+msgstr "Trigger %s visar fil %s (Använd %ld)\n"
+
+#: src/pi_trigger.c:864
+#, c-format
+msgid "Trigger %s dumps text %.*s (Hits %ld)\n"
+msgstr "Trigger %s visar text %.*s (Använd %ld)\n"
+
+#: src/pi_trigger.c:914
+#, c-format
+msgid "Unknown trigger rule type %s."
+msgstr "Typen %s för triggerregel är okänd."
+
+#: src/pi_trigger.c:939
+#, c-format
+msgid "Rule for trigger %s created successfully."
+msgstr "Lyckades skapa regel för trigger %s."
+
+#: src/pi_trigger.c:941
+msgid "Rule creation failed."
+msgstr "Lyckades inte skapa regel för trigger %s."
+
+#: src/pi_trigger.c:948
+#, c-format
+msgid ""
+"Usage: %s <name> <type> [<arg> [<help>]] [<pm>] [<broadcast>] [rights "
+"<cap>]\n"
+"   name: name of the trigger\n"
+"   type: one of:\n"
+"      - login   : the trigger will be triggered on user login, provide "
+"rights after type\n"
+"      - command : the trigger will be triggered by a command, provide the "
+"command in <arg>,\n"
+"                    then a help msg for the command, followed by any "
+"required rights\n"
+"      - timer   : the trigger will be triggered every <arg> seconds (cannot "
+"be 0).\n"
+"   arg: depends on type\n"
+"   help: help message for command (only for command triggers)\n"
+"   pm: always send trigger as a private message\n"
+"   broadcast: send this to all users\n"
+"   rights: rights required to activate rule\n"
+msgstr ""
+"Användning: %s <name> <type> [<arg> [<help>]] [<pm>] [<broadcast>] [rights "
+"<cap>]\n"
+"   name: triggerns namn\n"
+"   type: en av:\n"
+"      - login   : triggern körs när en användare ansluter till hubben, ange "
+"eventuella rättigheter efter type\n"
+"      - command : triggern körs när ett kommando körs, ange kommandot i "
+"<arg>,\n"
+"                    sedan en hjälptext för kommandot, följt av eventuella "
+"rättigheter om enbart vissa ska ha tillgång till kommandot\n"
+"      - timer   : triggern körs varje <arg> sekunder (kan inte vara 0).\n"
+"   arg: beror på type\n"
+"   help: hjälptext för kommandot (enbart för kommandotriggers)\n"
+"   pm: triggern skickas som PM, anges detta inte skickas det i main\n"
+"   broadcast: triggern skickas till alla användare, anges inte detta skickas "
+"det enbart till den som triggat\n"
+"   rights: rättighet(er) som krävs för att regeln ska aktiveras\n"
+
+#: src/pi_trigger.c:970
+#, c-format
+msgid ""
+"Usage: %s <name> <id>\n"
+"   name: name of the trigger\n"
+"   id  : ID of the rule\n"
+msgstr ""
+"Användning: %s <name> <id>\n"
+"   name: triggerns namn\n"
+"   id  : ID för regeln\n"
+
+#: src/pi_trigger.c:983
+#, c-format
+msgid "Trigger %s Rule ID %lu doesn't exist."
+msgstr "Trigger %s regel ID %lu finns inte."
+
+#: src/pi_trigger.c:988
+#, c-format
+msgid "Trigger %s Rule ID %lu deleted."
+msgstr "Trigger %s regel ID %lu borttaget."
+
+#: src/pi_trigger.c:996
+#, c-format
+msgid "  Rule %lu type "
+msgstr "  Regel %lu typ "
+
+#: src/pi_trigger.c:1036
+#, c-format
+msgid "Cannot find trigger %s\n"
+msgstr "Hittar inte trigger %s\n"
+
+#: src/pi_trigger.c:1043
+#, c-format
+msgid "Cannot find trigger %s rule ID %u\n"
+msgstr "Hittar inte trigger %s regel ID %u\n"
+
+#: src/pi_trigger.c:1114
+msgid "Add a trigger."
+msgstr "Skapa en trigger."
+
+#: src/pi_trigger.c:1115
+msgid "List triggers."
+msgstr "Lista alla triggers."
+
+#: src/pi_trigger.c:1117
+msgid "Delete a trigger."
+msgstr "Ta bort en trigger."
+
+#: src/pi_trigger.c:1119
+msgid "Add a rule."
+msgstr "Skapa en regel."
+
+#: src/pi_trigger.c:1120
+msgid "Delete a rule."
+msgstr "Ta bort en regel."
+
+#: src/pi_user.c:80
+#, c-format
+msgid ""
+"Unregistered users: %lu / %lu\n"
+"Registered users:   %lu / %lu\n"
+"Operators           %lu / %lu\n"
+" Total      %lu / %lu\n"
+" Peak             %lu\n"
+" Refused          %lu\n"
+" Buffering        %lu\n"
+msgstr ""
+"Oregistrerade användare: %lu / %lu\n"
+"Registerade användare:   %lu / %lu\n"
+"Operatörer         %lu / %lu\n"
+" Totalt            %lu / %lu\n"
+" Topp              %lu\n"
+" Nekade            %lu\n"
+" Buffrade          %lu\n"
+
+#: src/pi_user.c:111
+#, c-format
+msgid "Sorry, your class has a maximum of %u hubs.\n"
+msgstr "Tyvärr, din användarklass tillåter max %u hubbar.\n"
+
+#: src/pi_user.c:116
+#, c-format
+msgid "Sorry, your class has a minimum of %u hubs.\n"
+msgstr "Tyvärr, din användarklass kräver minst %u hubb(ar).\n"
+
+#: src/pi_user.c:121
+#, c-format
+msgid "Sorry, your class has a maximum of %u slots.\n"
+msgstr "Tyvärr, din användarklass tillåter max %u slottar.\n"
+
+#: src/pi_user.c:126
+#, c-format
+msgid "Sorry, your class has a minimum of %u slots.\n"
+msgstr "Tyvärr, din användarklass kräver minst %u slott(ar).\n"
+
+#: src/pi_user.c:143 src/pi_user.c:149 src/pi_user.c:156
+#, c-format
+msgid "Sorry, your class has a minimum share of %s.\n"
+msgstr "Tyvärr, din användarklass kräver minst %s i utdelning.\n"
+
+#: src/pi_user.c:175
+#, c-format
+msgid "Sorry, this client is not accepted because: %.*s\n"
+msgstr "Tyvärr, din klient tillåts inte på grund av: %.*s\n"
+
+#: src/pi_user.c:186
+#, c-format
+msgid "Sorry, your login is not accepted from this IP (%s)"
+msgstr "Tyvärr, din inloggning kan inte accepteras från detta IP (%s)"
+
+#: src/pi_user.c:220
+msgid "Sorry, the hub is full. It cannot accept more users from your class.\n"
+msgstr ""
+"Tyvärr, hubben är full. Den accepterar inte fler användare av din "
+"användarklass.\n"
+
+#: src/pi_user.c:277 src/pi_user.c:308
+#, c-format
+msgid "Usage: %s <nick> <ip/network>"
+msgstr "Användning: %s <nick> <ip/network>"
+
+#: src/pi_user.c:289
+#, c-format
+msgid "Please do not forget to assign the \"sourceverify\" right to user %s\n"
+msgstr ""
+"Glöm inte att tilldela \"sourceverify\" rättigheter till användare %s\n"
+
+#: src/pi_user.c:292
+#, c-format
+msgid "User %s is now allowed to log in from %s\n"
+msgstr "Användare %s tillåts nu att logga in från %s\n"
+
+#: src/pi_user.c:295 src/pi_user.c:323
+#, c-format
+msgid "Sorry, \"%s\" is not a recognisable IP address or network."
+msgstr ""
+"Tyvärr, \"%s\" är inte en identifierbar IP adress eller nätverksadress."
+
+#: src/pi_user.c:316
+#, c-format
+msgid "User %s is no longer allowed to log in from %s\n"
+msgstr "Användare %s får inte längre ansluta från %s\n"
+
+#: src/pi_user.c:319
+#, c-format
+msgid "Could not find source restriction \"%s\" for nick %s\n"
+msgstr "Hittade inte anslutningsbegränsning \"%s\" för användare %s\n"
+
+#: src/pi_user.c:342
+#, c-format
+msgid "Allow user %s from:\n"
+msgstr "Tillåt användare %s från:\n"
+
+#: src/pi_user.c:346
+#, c-format
+msgid " Source %s\n"
+msgstr " Källa %s\n"
+
+#: src/pi_user.c:350
+msgid " None."
+msgstr " Ingen."
+
+#: src/pi_user.c:364
+#, c-format
+msgid ""
+"Usage: !%s <clienttag> <minversion> <maxversion> <reason>\n"
+"Use 0 for version if unimportant."
+msgstr ""
+"Användning: !%s <clienttag> <minversion> <maxversion> <reason>\n"
+"Använd 0 som version ifall den inte spelar någon roll."
+
+#: src/pi_user.c:385
+#, c-format
+msgid "Client \"%s\" (%lf, %lf) added to banned list because: %s\n"
+msgstr "Klient \"%s\" (%lf, %lf) tillagd i banlistan på grund av: %s\n"
+
+#: src/pi_user.c:388
+#, c-format
+msgid "Client \"%s\" (%lf, %lf) added to banned list\n"
+msgstr "Klient \"%s\" (%lf, %lf) tillagd i banlistan\n"
+
+#: src/pi_user.c:403
+#, c-format
+msgid "Client \"%s\" (%lf, %lf) because: %.*s\n"
+msgstr "Klient \"%s\" (%lf, %lf) på grund av: %.*s\n"
+
+#: src/pi_user.c:406
+#, c-format
+msgid "Client \"%s\" (%lf, %lf)\n"
+msgstr "Klient \"%s\" (%lf, %lf)\n"
+
+#: src/pi_user.c:413
+msgid "No clients banned."
+msgstr "Inga klienter bannade."
+
+#: src/pi_user.c:426
+#, c-format
+msgid "Usage: !%s <clientname> <min> <max>\n"
+msgstr "Användning: !%s <clientname> <min> <max>\n"
+
+#: src/pi_user.c:434
+#, c-format
+msgid "Client \"%s\" removed from banlist\n"
+msgstr "Klient \"%s\" borttagen från banlistan\n"
+
+#: src/pi_user.c:436
+#, c-format
+msgid "Client \"%s\" not found in banlist\n"
+msgstr "Klient \"%s\" hittades inte i banlistan\n"
+
+#: src/pi_user.c:493
+#, c-format
+msgid ""
+"WARNING: resourcelimit for this process allows a absolute maximum of %lu "
+"users, currently %lu are configured.\n"
+msgstr ""
+"WARNING: resourcelimit for this process allows a absolute maximum of %lu "
+"users, currently %lu are configured.\n"
+
+#: src/pi_user.c:504
+#, c-format
+msgid ""
+"WARNING: You are using an Aquila version based on select(). This limits the "
+"effective maximum size of your hub to %u. Going over this limit may crash "
+"your hub.\n"
+msgstr ""
+"WARNING: You are using an Aquila version based on select(). This limits the "
+"effective maximum size of your hub to %u. Going over this limit may crash "
+"your hub.\n"
+
+#: src/pi_user.c:512
+msgid ""
+"WARNING: You are using an Aquila version based on poll(). This limits the "
+"performance of your hub with larger sizes. Please consider moving to kernel "
+"version 2.6 and a recent glibc.\n"
+msgstr ""
+"WARNING: You are using an Aquila version based on poll(). This limits the "
+"performance of your hub with larger sizes. Please consider moving to kernel "
+"version 2.6 and a recent glibc.\n"
+
+#: src/pi_user.c:519
+msgid ""
+"WARNING: userlimit.registered equals userlimit.op. userlimit.registered "
+"includes the ops (since they are registered too): setting them equal means "
+"that you only allow OPs, but not normal registered users.\n"
+msgstr ""
+"VARNING: userlimit.registered är lika med userlimit.op. userlimit.registered "
+"inkluderar OP's (eftersom de också är registrerade): att sätta dem till "
+"samma värde betyder att du enbart tillåter OP's, men inte vanliga "
+"registrerade användare.\n"
+
+#: src/pi_user.c:553
+msgid "Maximum number of users (set to 0 to ignore)."
+msgstr "Max antal användare (sätt till 0 för att ignorera)."
+
+#: src/pi_user.c:554
+msgid "Maximum unregistered users."
+msgstr "Max antal oregistrerade användare."
+
+#: src/pi_user.c:555
+msgid "Maximum registered users."
+msgstr "Max antal registrerade användare."
+
+#: src/pi_user.c:556
+msgid "Reserve place for this many ops in the registered users."
+msgstr "Reservera plats för så här många OPs bland de registrerade användarna."
+
+#: src/pi_user.c:560
+msgid "Minimum share requirement for unregistered users."
+msgstr "Minsta utdelning för oregistrerade användare."
+
+#: src/pi_user.c:561
+msgid "Minimum share requirement for registered users."
+msgstr "Minsta utdelning för registrerade användare."
+
+#: src/pi_user.c:562
+msgid "Minimum share requirement for OPS"
+msgstr "Minsta utdelning för OPs."
+
+#: src/pi_user.c:564
+msgid "Minimum hubs for unregistered users."
+msgstr "Minst antal hubbar för oregistrerade användare."
+
+#: src/pi_user.c:565
+msgid "Maximum hubs for unregistered users."
+msgstr "Max antal hubbar för oregistrerade användare."
+
+#: src/pi_user.c:566
+msgid "Minimum slots for unregistered users."
+msgstr "Minst antal slottar för oregistrerade användare."
+
+#: src/pi_user.c:567
+msgid "Maximum slots for unregistered users."
+msgstr "Max antal slottar för oregistrerade användare."
+
+#: src/pi_user.c:568
+msgid "Minimum hubs/slot ratio for unregistered users."
+msgstr "Minsta hubb/slot ratio för oregistrerade användare."
+
+#: src/pi_user.c:570
+msgid "Minimum hubs for registered users."
+msgstr "Minst antal hubbar för registrerade användare."
+
+#: src/pi_user.c:571
+msgid "Maximum hubs for registered users."
+msgstr "Max antal hubbar för registrerade användare."
+
+#: src/pi_user.c:572
+msgid "Minimum slots for registered users."
+msgstr "Minst antal slottar för registrerade användare."
+
+#: src/pi_user.c:573
+msgid "Maximum slots for registered users."
+msgstr "Max antal slottar för registrerade användare."
+
+#: src/pi_user.c:574
+msgid "Minimum hubs/slot ratio for registered users."
+msgstr "Minsta hubb/slot ratio för registrerade användare."
+
+#: src/pi_user.c:576
+msgid "Minimum hubs for Operators."
+msgstr "Minst antal hubbar för OPs."
+
+#: src/pi_user.c:577
+msgid "Maximum hubs for Operators."
+msgstr "Max antal hubbar för OPs."
+
+#: src/pi_user.c:578
+msgid "Minimum slots for Operators."
+msgstr "Minst antal slottar för OPs."
+
+#: src/pi_user.c:579
+msgid "Maximum slots for Operators."
+msgstr "Max antal slottar för OPs."
+
+#: src/pi_user.c:580
+msgid "Minimum hubs/slot ratio for Operators."
+msgstr "Minsta hubb/slot ratio för OPs."
+
+#: src/pi_user.c:591
+msgid "Show logged in user counts."
+msgstr "Visar antal inloggade användare."
+
+#: src/pi_user.c:593
+msgid "Ban a client."
+msgstr "Bannar en klient."
+
+#: src/pi_user.c:594
+msgid "List client bans."
+msgstr "Visar alla bannade klienter."
+
+#: src/pi_user.c:595
+msgid "Unban a client."
+msgstr "Tar bort ett klientban."
+
+#: src/pi_user.c:597
+msgid "Add a source IP restriction for a user."
+msgstr "Lägg till en IP begränsning för en användare."
+
+#: src/pi_user.c:598
+msgid "Remove a source IP restriction for a user."
+msgstr "Ta bort en IP begränsning för en användare."
+
+#: src/pi_user.c:599
+msgid "Show source IP restrictions for a user."
+msgstr "Visa IP begränsningar för en användare."
+
+#: src/pi_user.c:601
+msgid "Total users in the hub"
+msgstr "Totalt antal användare i hubben"
+
+#: src/pi_user.c:602
+msgid "User peak"
+msgstr "Användarrekord"
+
+#: src/pi_user.c:603
+msgid "Users refused for slot/hub/ratio/user limits."
+msgstr "Nekade användare för slott/hub/ratio/user begränsningar."
+
+#: src/pi_user.c:604
+msgid "Unregistered users."
+msgstr "Oregistrerade användare."
+
+#: src/pi_user.c:605
+msgid "Registered users."
+msgstr "Registrerade användare."
+
+#: src/pi_user.c:606
+msgid "Op users."
+msgstr "Operatörer."
+
+#: src/pi_iplog.c:118
+msgid "No IP logging enabled.\n"
+msgstr "Ingen IP-loggning aktiverad.\n"
+
+#: src/pi_iplog.c:128
+msgid "Logout time  :  IP  : Nick\n"
+msgstr "Utloggad  :  IP  : Nick\n"
+
+#: src/pi_iplog.c:138
+msgid "No IPs found.\n"
+msgstr "Inga IP nummer hittades.\n"
+
+#: src/pi_iplog.c:150
+msgid "Number of IPs to remember."
+msgstr "Antal IP nummer att lagra."
+
+#: src/pi_iplog.c:155
+msgid "List iplogs."
+msgstr "Lista lagrade IP nummer."
+
+#: src/hub.c:92
+msgid "Buffering Timeout"
+msgstr "Buffering Timeout"
+
+#: src/hub.c:149 src/hub.c:591
+msgid "Connection closed."
+msgstr "Anslutning stängd."
+
+#: src/hub.c:251
+msgid "Error on read."
+msgstr "Fel vid läsning."
+
+#: src/hub.c:285
+#, c-format
+msgid "Socket error %d."
+msgstr "Socketfel %d."
+
+#: src/hub.c:287
+#, c-format
+msgid "Socket errno %d."
+msgstr "Socketfel nummer %d."
+
+#: src/hub.c:366
+#, c-format
+msgid "<%s> Don't reconnect so fast.|"
+msgstr "<%s> Återanslut inte så fort.|"
+
+#: src/hub.c:376 src/hub.c:385 src/hub.c:400 src/hub.c:412
+#, c-format
+msgid "<%s> This hub is too busy, please try again later.|"
+msgstr "<%s> This hub is too busy, please try again later.|"
+
+#: src/cap.c:28
+msgid "Default capabilities: chat, pmop, dl and search."
+msgstr "Standard rättigheter: chat, pmop, dl och search."
+
+#: src/cap.c:29
+msgid "Default REG capabilities: chat, search, pm, dl."
+msgstr "Standard REG rättigheter: chat, search, pm, dl."
+
+#: src/cap.c:30
+msgid "Default VIP capabilities: chat, search, pm, dl, share."
+msgstr "Standard VIP rättigheter: chat, search, pm, dl, share."
+
+#: src/cap.c:31
+msgid "Default KVIP capabilities: chat, search, pm, dl, share, kick."
+msgstr "Standard KVIP rättigheter: chat, search, pm, dl, share, kick."
+
+#: src/cap.c:32
+msgid "Default OP capabilities: chat, search, pm, dl, share, key, kick, ban."
+msgstr "Standard OP rättigheter: chat, search, pm, dl, share, key, kick, ban."
+
+#: src/cap.c:33
+msgid ""
+"Default CHEEF capabilities: chat, search, pm, dl, share, key, kick, ban, "
+"user."
+msgstr ""
+"Standard CHEEF rättigheter: chat, search, pm, dl, share, key, kick, ban, "
+"user."
+
+#: src/cap.c:34
+msgid ""
+"Default ADMIN capabilities: chat, search, pm, dl, share, key, kick, ban, "
+"user, group, inherit, config."
+msgstr ""
+"Standard ADMIN rättigheter: chat, search, pm, dl, share, key, kick, ban, "
+"user, group, inherit, config."
+
+#: src/cap.c:36
+msgid "Everything. All powerfull. Mostly, capable of hardbanning."
+msgstr "Alla rättigheter. All makt. För det mesta, kan hårdbanna."
+
+#: src/cap.c:37
+msgid "Allows the user to chat in main window."
+msgstr "Tillåter användaren att skriva i chatten."
+
+#: src/cap.c:38
+msgid "Allows user to search the hub for files."
+msgstr "Tillåter användaren att söka."
+
+#: src/cap.c:39
+msgid "Allows the user to send private messages to OPs only."
+msgstr "Tillåter användaren att skicka PM enbart till OPs."
+
+#: src/cap.c:40
+msgid "Allows the user to send private messages to anyone."
+msgstr "Tillåter användaren att skicka PM till vem som helst."
+
+#: src/cap.c:41
+msgid "Allows user to download files."
+msgstr "Tillåter användaren att ladda ner filer."
+
+#: src/cap.c:42
+msgid "Allows users to circumvent the share requirements."
+msgstr "Tillåter användaren att kringgå utdelningskraven."
+
+#: src/cap.c:43
+msgid "Awards the user the much desired \"key\"."
+msgstr "Tilldelar en användare den åtråvärda \"key\"."
+
+#: src/cap.c:44
+msgid "Allows the user to kick other users."
+msgstr "Tillåter användaren att kicka andra användare."
+
+#: src/cap.c:45
+msgid "Allows the user to ban other users."
+msgstr "Tillåter användaren att banna andra användare."
+
+#: src/cap.c:46
+msgid "Allows the user to edit the configuratoin of the hub."
+msgstr "Tillåter användaren att ändra inställningarna för hubben."
+
+#: src/cap.c:47
+msgid "Allows the user to use the \"say\" command."
+msgstr "Tillåter anändaren att använda \"say\" kommandot."
+
+#: src/cap.c:48
+msgid "Allows the user to add new users."
+msgstr "Tillåter användaren att skapa nya användare."
+
+#: src/cap.c:49
+msgid "Allows the user to add new groups."
+msgstr "Tillåter användaren att skapa nya grupper."
+
+#: src/cap.c:50
+msgid "Allows the user to awards rights he posseses to users or groups."
+msgstr ""
+"Tillåter användaren att ge andra användare samma rättigheter som han själv."
+
+#: src/cap.c:51
+msgid ""
+"Allows the user to hardban IPs. A hardban is a bit like firewalling the IP."
+msgstr ""
+"Tillåter en användare att hårdbanna IP adresser. Ett hårdban är ungefär som "
+"att blockera det i brandväggen."
+
+#: src/cap.c:52
+msgid "This users does not need a tag to get in the hub."
+msgstr "Dessa användare behöver inte ha tagg för att komma in i hubben."
+
+#: src/cap.c:53
+msgid "This hides the share of the user for all excepts ops."
+msgstr "Detta döljer användarens utdelning för alla utom ops."
+
+#: src/cap.c:54
+msgid ""
+"This blocks everyone from downloading from this user. Only works for active "
+"users."
+msgstr ""
+"Detta hindrar alla att ladda från denna användaren. Fungerar enbart för "
+"aktiva användare."
+
+#: src/cap.c:55
+msgid "Users with this right can post messages as large as they want."
+msgstr ""
+"Användare med denna rättighet kan skicka hur stora meddelanden de vill."
+
+#: src/cap.c:56
+msgid "Users with this right are not subject to search limitations."
+msgstr "Användare med denna rättighet kringgår sökbegränsningar."
+
+#: src/cap.c:57
+msgid ""
+"Users with this right are only allowed into the hub if their source IP is "
+"listed for their nick in the userrestict list."
+msgstr ""
+"Användare med denna rättighet är begränsade så att de enbart kommer in i "
+"hubben om deras IP adress överensstämmer med det som är lagrat i "
+"'userrestrict' listan."
+
+#: src/cap.c:58
+msgid "Users with this right are allowed to redirect users."
+msgstr "Användare med denna rättighet kan vidarebefodra användare"
+
+#: src/cap.c:59
+msgid ""
+"Users with this right are allowed to use locallan ips (and avoid ctm and "
+"asearch checks)."
+msgstr ""
+"Användare med denna rättighet kan använda lokala ip-nummer (och undvika ctm "
+"och asearch kontroller)."
+
+#: src/cap.c:60
+msgid "Users with this right do not show up in the userlist."
+msgstr "Användare med denna rättighet syns inte i användarlistan."
+
+#: src/core_config.c:90
+msgid "Port on which the hub will listen."
+msgstr "Hubbens standardport."
+
+#: src/core_config.c:91
+msgid "IP on which the hub will listen, set to 0.0.0.0 for all."
+msgstr "IP adress som hubben använder, sätt till 0.0.0.0 för alla."
+
+#: src/core_config.c:92
+msgid "Extra NMDC ports to listen on."
+msgstr "Extra NMDC portar som hubben lyssnar på."
+
+#: src/core_config.c:93
+msgid "A hostname (or IP address) where your machine will be reachable."
+msgstr "Hubbens adress (eller IP adress)."
+
+#: src/core_config.c:94
+msgid "Name of the hub"
+msgstr "Hubbens namn."
+
+#: src/core_config.c:95
+msgid "Description of the hub."
+msgstr "Hubbens beskrivning."
+
+#: src/core_config.c:96
+msgid "Owner of the hub."
+msgstr "Hubbens ägare."
+
+#: src/core_config.c:97
+msgid "Name of the Hub Security bot."
+msgstr "Namnet på hubbens säkerhetsbot."
+
+#: src/core_config.c:98
+msgid "Description of the Hub Security bot."
+msgstr "Beskrivning för hubbens säkerhetsbot."
+
+#: src/core_config.c:100
+msgid "Maximum Length of the users description field."
+msgstr "Max längd för en användares beskrivningsfält."
+
+#: src/core_config.c:101
+msgid "Maximum length of the users tag field."
+msgstr "Max längd för en användares taggfält"
+
+#: src/core_config.c:102
+msgid "Maximum length of the users speed field."
+msgstr "Max längd för en användares hastighetsfält."
+
+#: src/core_config.c:103
+msgid "Maximum length of the users email address field."
+msgstr "Max längd för en användares epostfält."
+
+#: src/core_config.c:104
+msgid "Maximum length of the users sharesize field."
+msgstr "Max längd för en användares utdelningsfält."
+
+#: src/core_config.c:105
+msgid ""
+"Kick the user if the tag is too long. If this is not set, the tag will be "
+"hidden."
+msgstr "Kicka användare med för lång tagg, om detta inte anges döljs taggen."
+
+#: src/core_config.c:107
+msgid "Redirection target."
+msgstr "Vidarebefodringsadress."
+
+#: src/core_config.c:108
+msgid "Redirection target in case of kick or ban."
+msgstr "Vidarebefodringsadress vid kick och ban."
+
+#: src/core_config.c:109
+msgid "Length of automatic temporary ban after a kick."
+msgstr "Hur lång en temporär banning är efter kick."
+
+#: src/core_config.c:111
+msgid "Maximum number of retries a user is allowed for his password."
+msgstr "Max antal försök för att ange lösenord"
+
+#: src/core_config.c:112
+msgid "Length of automatic ban on too many retries (in seconds)."
+msgstr ""
+"Hur många sekunders automatisk ban för förmånga felaktiga lösenordsförsök."
+
+#: src/core_config.c:114
+msgid ""
+"Users can only reconnect after this period (in seconds). This is counted "
+"from the previous login time, not logout."
+msgstr ""
+"Användare kan endast återansluta efter så här många sekunder. Detta räknas "
+"från föregående inloggning, inte utloggning."
+
+#: src/core_config.c:115
+msgid ""
+"IPs that are used in a CTM exploit attack are hard banned for this time (in "
+"seconds)."
+msgstr ""
+"IP adresser som används i en CTM exploit attack hårdbannas i så här många "
+"sekunder."
+
+#: src/core_config.c:117
+msgid ""
+"Users that go offline for shorter than this period do not appear to go "
+"offline. On rejoing they will get their rate counters back."
+msgstr ""
+"Användare som tappar kontakten med hubben under kortare tid än detta anses "
+"inte ha loggat ur. När de ansluter igen får de tillbaka sina 'rate counters'."
+
+#: src/core_config.c:119
+msgid "The hub sends all error messages here."
+msgstr "Hubben skickar alla felmeddelanden hit."
+
+#: src/core_config.c:121
+msgid ""
+"If a user has more data buffered than this setting, he has limited time to "
+"read it all."
+msgstr ""
+"Om en användare har mer data buffrad än detta värde har han/hon en begränsad "
+"tid att komma ifatt."
+
+#: src/core_config.c:122
+msgid ""
+"If a user has more data buffered than this setting, no more will be allowed."
+msgstr "Största mängd data som hubben kommer att buffra för en användare."
+
+#: src/core_config.c:123
+msgid ""
+"If the hub is buffering more than this setting, no more will be allowed."
+msgstr "Största mängd data som hubben kommer att buffra."
+
+#: src/core_config.c:125
+msgid ""
+"If the hub start buffering for a user, after this many milliseconds, the "
+"user will be disconnected."
+msgstr ""
+"Om hubben börjar buffra för en användare kommer han/hon att bli frånkopplad "
+"efter så här många millisekunder."
+
+#: src/core_config.c:126
+msgid ""
+"If the hub start buffering for a user and the amount exceed hub."
+"BufferSoftLimit, he wil be disconnected after this many milliseconds."
+msgstr ""
+"Om hubben börjar buffra för en användare och mängden överstiger hub."
+"buffersoftlimit kommer han/hon att bli frånkopplad."
+
+#: src/core_config.c:128
+msgid ""
+"If a user violates the rate controls too much, he will be banned for this "
+"amount of time."
+msgstr ""
+"Om en användare överträder 'rate' begränsningarna för mycket kommer han/hon "
+"att bli bannad så här länge."
+
+#: src/core_config.c:129
+msgid ""
+"If the user violatest the rate controls too much within this period after "
+"joining, he will be hardbanned permanently."
+msgstr ""
+"Om en användare överträder 'rate' begränsningarna för mycket under den här "
+"tidsperioden efter inloggning kommer han/hon att bli permanent hårdbannad."
+
+#: src/core_config.c:131
+msgid "These are the rights of an unregistered user."
+msgstr "Det här är rättigheterna för en oregistrerad användare"
+
+#: src/core_config.c:133
+msgid ""
+"This is the minimum time before an IP address is allowed to reconnect to the "
+"hub. NEVER TURN THIS OFF."
+msgstr ""
+"Det här är den kortaste tillåtna tiden innan en IP adress får återansluta  "
+"till hubben. STÄNG ALDRIG AV DETTA."
+
+#: src/core_config.c:134
+msgid "This is the number of IP address to remember."
+msgstr "Det här är antalet IP adresser som sparas."
+
+#: src/core_config.c:136
+msgid "This turns on or off the ndelay setting."
+msgstr "Det här sätter på eller stänger av inställningen för ndelay"
+
+#: src/core_config.c:138
+msgid "This turns on or off input processing for users in overflow mode."
+msgstr ""
+
+#: src/core_config.c:139
+#, fuzzy
+msgid "This turns on or off disconnecting users on buffering timeout."
+msgstr "Det här sätter på eller stänger av inställningen för ndelay"
+
+#: src/core_config.c:142
+msgid "Maximum number of outstanding data buffers per user."
+msgstr "Max antal innestående data buffertar per användare."
+
+#: src/core_config.c:143
+msgid "Set this to 0 to enable the send buffer."
+msgstr "Sätt detta till 0 för att sätta på 'send buffer'."
+
+#: src/core_config.c:167 src/core_config.c:169
+msgid "Total bytes send by hub since startup."
+msgstr "Totalt antal bytes som hubben skickat sedan uppstart."
+
+#: src/core_config.c:170
+msgid "Number of buffering users."
+msgstr "Antal buffrande användare."
+
+#: src/core_config.c:172
+msgid "Total of all data waiting to be written."
+msgstr "Total mängd data som väntar på att skrivas."
+
+#: src/core_config.c:176 src/core_config.c:183
+msgid "Number of outstanding buffers."
+msgstr "Antal innestående buffertar."
+
+#: src/core_config.c:178
+msgid "Peak number of outstanding buffers."
+msgstr "Högsta antal innestående buffertar."
+
+#: src/core_config.c:180
+msgid "Absolute maximum of outstanding buffers allowed."
+msgstr "Max antal tillåtna innestående buffertar."
+
+#: src/core_config.c:185
+msgid "Peak number of outstanding bytes."
+msgstr "Högsta antal innestående bytes."
+
+#: src/core_config.c:187
+msgid "Absolute maximum of outstanding bytes allowed."
+msgstr "Max antal tillåtna innestående bytes"
+
+#: src/core_config.c:189
+msgid "Number of IOCP users."
+msgstr "Antal IOCP användare."
+
+#: src/core_config.c:191
+msgid "Absolute maximum of outstanding bytes per user allowed."
+msgstr "Max antal tillåtna innestående bytes per användare."
+
+#: src/flags.c:30
+msgid "None"
+msgstr "Ingen"
+
+#: src/flags.c:90
+#, c-format
+msgid "Added %s.\n"
+msgstr "Skapat %s.\n"
+
+#: src/flags.c:95
+#, c-format
+msgid "Removed %s.\n"
+msgstr "Borttagen %s.\n"
+
+#: src/flags.c:103
+#, c-format
+msgid "Unknown %s.\n"
+msgstr "Okänd %s.\n"
+
+#: src/xml.c:292
+#, fuzzy
+msgid "!Unknown Type!\n"
+msgstr "%s !Okänt värde!\n"
+
+#: src/pi_statbot.c:100
+#, fuzzy
+msgid "Command returns info for the statbot."
+msgstr "Kommandot returnerar senaste chattraderna."
+
+#: src/pi_rss.c:609 src/pi_rss.c:643 src/pi_rss.c:676
+#, c-format
+msgid " Title: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:612 src/pi_rss.c:646 src/pi_rss.c:681
+#, c-format
+msgid " Link: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:614 src/pi_rss.c:648
+#, fuzzy, c-format
+msgid " Description: %s\n"
+msgstr "Hubbens beskrivning."
+
+#: src/pi_rss.c:617 src/pi_rss.c:651 src/pi_rss.c:684
+msgid ""
+"\n"
+" Example node:\n"
+msgstr ""
+
+#: src/pi_rss.c:706
+#, fuzzy
+msgid "Unknown format.\n"
+msgstr "Okänd %s.\n"
+
+#: src/pi_rss.c:815
+#, c-format
+msgid "RSS fetch failed, destination moved permanently: %s"
+msgstr ""
+
+#: src/pi_rss.c:829
+#, c-format
+msgid "RSS fetch failed: %s"
+msgstr ""
+
+#: src/pi_rss.c:862 src/pi_rss.c:868
+#, fuzzy, c-format
+msgid "RSS: %s is not a valid RSS feed.\n"
+msgstr "\"%s\" är inte en giltig IP adress.\n"
+
+#: src/pi_rss.c:899
+msgid "Unable to create socket.\n"
+msgstr ""
+
+#: src/pi_rss.c:907 src/pi_rss.c:912
+#, fuzzy, c-format
+msgid "RSS update ERROR: %s: connect: %s\n"
+msgstr "Fel vid uppdatering av hublista: %s: connect: %s\n"
+
+#: src/pi_rss.c:957
+#, c-format
+msgid "RSS read (%s)"
+msgstr ""
+
+#: src/pi_rss.c:1027
+#, c-format
+msgid "RSS output (%s)"
+msgstr ""
+
+#: src/pi_rss.c:1052
+#, fuzzy, c-format
+msgid "RSS error (%s)"
+msgstr "Socketfel %d."
+
+#: src/pi_rss.c:1075
+#, c-format
+msgid "RSS timeout (%s)"
+msgstr ""
+
+#: src/pi_rss.c:1092 src/pi_rss.c:1274 src/pi_rss.c:1340
+#, fuzzy, c-format
+msgid "Usage: %s <feed>\n"
+msgstr "Användning: %s <name>\n"
+
+#: src/pi_rss.c:1093
+#, fuzzy
+msgid " Available feeds:\n"
+msgstr "Tillgängliga kommandon:\n"
+
+#: src/pi_rss.c:1098 src/pi_rss.c:1231
+#, fuzzy
+msgid "No description."
+msgstr ""
+"\n"
+"Inga LUA skript körs.\n"
+
+#: src/pi_rss.c:1109 src/pi_rss.c:1177
+#, fuzzy, c-format
+msgid "Feed %s not found\n"
+msgstr "Användaren %s finns inte."
+
+#: src/pi_rss.c:1130
+#, fuzzy, c-format
+msgid "Usage: %s <name> <interval> <url>\n"
+msgstr "Användning: %s <name> <help>\n"
+
+#: src/pi_rss.c:1137
+#, c-format
+msgid "Feed interval invalid: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:1143
+#, fuzzy, c-format
+msgid "Feed %s already exists.\n"
+msgstr "Användare %s finns redan.\n"
+
+#: src/pi_rss.c:1150
+#, fuzzy
+msgid "Feed creation failed.\n"
+msgstr "Lyckades inte skapa regel för trigger %s."
+
+#: src/pi_rss.c:1171
+#, fuzzy, c-format
+msgid "Usage: %s <name> <fields>\n"
+msgstr "Användning: %s <name> <help>\n"
+
+#: src/pi_rss.c:1185
+#, fuzzy, c-format
+msgid " Adding %s\n"
+msgstr "Skapat %s.\n"
+
+#: src/pi_rss.c:1192
+msgid " Feed is active and will be updated later.\n"
+msgstr ""
+
+#: src/pi_rss.c:1196
+msgid " Updating feed now...\n"
+msgstr ""
+
+#: src/pi_rss.c:1224
+#, fuzzy
+msgid "No feeds configured\n"
+msgstr "Inga hubblistor konfigurerade\n"
+
+#: src/pi_rss.c:1228
+#, c-format
+msgid "Feed: %s (Updated %s)\n"
+msgstr ""
+
+#: src/pi_rss.c:1236
+#, c-format
+msgid "  Target user: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:1238
+#, fuzzy
+msgid "  Target rights: "
+msgstr " och kräver följande rättigheter "
+
+#: src/pi_rss.c:1243
+#, c-format
+msgid "  Link: http://%s:%u/%s\n"
+msgstr ""
+
+#: src/pi_rss.c:1245
+#, c-format
+msgid "  Link: http://%s/%s\n"
+msgstr ""
+
+#: src/pi_rss.c:1248
+#, c-format
+msgid "  Last modified: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:1250
+msgid "  Next update: Running...\n"
+msgstr ""
+
+#: src/pi_rss.c:1252
+#, c-format
+msgid "  Next update: %s\n"
+msgstr ""
+
+#: src/pi_rss.c:1256
+msgid " Includes: "
+msgstr ""
+
+#: src/pi_rss.c:1283 src/pi_rss.c:1349
+msgid "Feed is being updated. please retry in a few moments.\n"
+msgstr ""
+
+#: src/pi_rss.c:1288
+#, fuzzy, c-format
+msgid "Feed %s deleted\n"
+msgstr "Grupp %s är borttagen.\n"
+
+#: src/pi_rss.c:1301
+#, c-format
+msgid ""
+"Usage: %s <feed> user <target> &#124; rights <rights> &#124; main\n"
+"  user <target>: send feed output to user\n"
+"  right <rights>: send feed output to all user with <rights>\n"
+msgstr ""
+
+#: src/pi_rss.c:1317
+#, c-format
+msgid "Sending output from feed %s to %s\n"
+msgstr ""
+
+#: src/pi_rss.c:1321
+#, c-format
+msgid "Sending output from feed %s to all users with rights "
+msgstr ""
+
+#: src/pi_rss.c:1354
+#, c-format
+msgid "Feed %s update started.\n"
+msgstr ""
+
+#: src/pi_rss.c:1548 src/pi_rrd.c:510
+msgid "If set, errors are not reported."
+msgstr ""
+
+#: src/pi_rss.c:1550
+#, fuzzy
+msgid "Maximum length of an RSS entry."
+msgstr "Max antal tecken i ett chattmeddelande."
+
+#: src/pi_rss.c:1552
+msgid "Maximum age of an RSS entry."
+msgstr ""
+
+#: src/pi_rss.c:1554
+msgid "Add a RSS or Atom feed."
+msgstr ""
+
+#: src/pi_rss.c:1556
+msgid "List the RSS or Atom feeds."
+msgstr ""
+
+#: src/pi_rss.c:1557
+#, fuzzy
+msgid "Delete a RSS or Atom feed."
+msgstr "Ta bort en regel."
+
+#: src/pi_rss.c:1559
+msgid "Force an update on a RSS or Atom feed."
+msgstr ""
+
+#: src/pi_rss.c:1561
+msgid "Configure where to send a RSS or Atom feed."
+msgstr ""
+
+#: src/pi_rss.c:1563
+msgid "Select elements of a RSS or Atom feed."
+msgstr ""
+
+#: src/pi_rss.c:1564
+msgid "Show an RSS or Atom feed."
+msgstr ""
+
+#: src/pi_rrd.c:96
+#, c-format
+msgid "RRD %s update failed: %s!"
+msgstr ""
+
+#: src/pi_rrd.c:169
+#, fuzzy, c-format
+msgid "Statistic %s not found.\n"
+msgstr "Användaren %s finns inte."
+
+#: src/pi_rrd.c:362
+#, c-format
+msgid ""
+"Usage: %s <name> <filename> <period>\n"
+"          [DS:ds-name:DST:dst arguments]\n"
+"          [RRA:CF:cf arguments]\n"
+" <name>: name of the rrd entry\n"
+" <filename>: filename to save data in\n"
+" <period>: how often to sample data (suggestion: 300s)\n"
+"  for the other arguments please consult the rrdtool manual\n"
+msgstr ""
+
+#: src/pi_rrd.c:374
+#, fuzzy, c-format
+msgid "RRD %s already exists."
+msgstr "Användare %s finns redan.\n"
+
+#: src/pi_rrd.c:380
+#, fuzzy, c-format
+msgid "%s: %s is not a valid time string\n"
+msgstr "\"%s\" är inte en giltig IP adress.\n"
+
+#: src/pi_rrd.c:399
+#, c-format
+msgid "DS entry has bad format: %s\n"
+msgstr ""
+
+#: src/pi_rrd.c:425
+#, c-format
+msgid "RRD create FAILED: %s\n"
+msgstr ""
+
+#: src/pi_rrd.c:429
+#, fuzzy, c-format
+msgid "RRD %s created.\n"
+msgstr "Rättighet %s har skapats.\n"
+
+#: src/pi_rrd.c:448
+#, c-format
+msgid "RRD %s filename: %s period: %lu\n"
+msgstr ""
+
+#: src/pi_rrd.c:472
+#, fuzzy, c-format
+msgid "RRD %s not found.\n"
+msgstr "Användaren %s finns inte."
+
+#: src/pi_rrd.c:477
+#, fuzzy, c-format
+msgid "RRD %s deleted.\n"
+msgstr "Grupp %s är borttagen.\n"
+
+#: src/pi_rrd.c:501
+msgid "Create an RRD file for statistics gathering"
+msgstr ""
+
+#: src/pi_rrd.c:502
+#, fuzzy
+msgid "Show the RRD file generated."
+msgstr "Visar alla zombies."
+
+#: src/pi_rrd.c:503
+#, fuzzy
+msgid "Remove a RRD file."
+msgstr "Ta bort ett luaskript."
+
+#~ msgid "LUA: ERROR saving %s"
+#~ msgstr "LUA: Fel när %s sparades"

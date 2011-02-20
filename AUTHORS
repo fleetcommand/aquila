@@ -1,0 +1,10 @@
+
+All code written by Johan Verrept (jove@users.berlios.de), except the parts
+mentioned below.
+
+Original RBT implementation written by Thomas Niemann (thomasn@jps.net)
+Source: http://www.cs.auckland.ac.nz/software/AlgAnim/niemann/s_man.htm
+
+src/getaddrinfo.[ch] and m4/*.m4 written by Motoyuki Kasahara
+Source: http://www.sra.co.jp/people/m-kasahr/getaddrinfo/
+License see: README.getaddrinfo

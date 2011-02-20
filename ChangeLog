@@ -1,0 +1,722 @@
+This is the Aquila Changelog.
+
+0.1.11-pre2-beta3 (2009. 07. 16.):
+	Fixed uint-ulong mismatch which caused wrong HubINFO on 64 bit OS
+
+0.1.11-pre2-beta2 (2007. 11. 13.):
+        Fix compile when zline support is disabled
+	LUA: Added AccountList() function
+	
+0.1.11-pre2-beta1:
+	Added nls support in RSS and RRD.
+	Added lots of nicklistcache statistics.
+	Fix Usage printing in !rsstarget
+	Added hub.BufferBlockOnOverflow, hub.BufferDisconnectOnTimeout,
+		nmdc.notimeoutonline
+	Removed all old save functions.
+
+0.1.11-pre1:
+	Added partial hu_HU (FleetCommand)
+	updated sv.po (Thank you en_dator).
+	Fallback to processor identifier on windows if ProcessorNameString
+		is not available. (Reported yada)
+	Fix rrd configure include path (Reported FleetCommand)
+	RRD: Fix buf in xml load.
+	Fixed compiling pi_statistics.c on windows.
+	Import LastIP correctly.
+	Fixed a bunch of string termination bugs.
+	HUB: improve read error handling.
+	RRD: fix include searchpath (Reported FleetCommand).
+	RDD: fix crash in error printing.
+	Added lastip to AccountFind
+	LUA: fixed AccountFind rights printing. (Reported FleetCommand)
+	RRD: Fix problem with DS parsing.
+	RRD: improved error reporting.
+	HUB: don't free client_t of previous socket if setup fails.
+	NMDC: ignore empty $ValidateNick commands.
+	Fix preproc directive in main.c for PLUGIN_RRD
+	XML: improve parsing of <!-- --> comments.
+	RRD: added RRD module.
+	Make save/load event handlers always return PLUGIN_RETVAL_CONTINUE
+	Added generic statistics support.
+	LUA: cancel timers when closing script (reported en_dator).
+	HUB: rearranged order.
+	LUA: fix timer error handling (reported en_dator)
+	HUB: Use real buffer in closing socket.
+	IOCP: Fix delayed close in esocket_iocp.c
+	Fix crash with timer set after user freed.
+	Added support for hidden users.
+	LUA: fixed crash in SetConfig (Reported en_dator)
+	Don't forget to delete commands if load failed. (Reported curse)
+	Added missing etimer.h to dist.
+	LUA: added real timer support.
+	Removed esocket.c base file.
+	Fixed bug in accept_user if esocket cannot be created in error case.
+	Split off timers from esocket_iocp.c
+	removed unnecessary code from esocket_iocp.c
+	IOCP: added IOCP_COMPLETION_FRAGMENTS as variable.
+	Added sv.po (Thanks en_dator)
+	Split off timers from esocket.
+	BUILDSYS: fixed problems with decision cascade.
+	STATS: fix help message.
+	BUILTIN: fix !userinfo for offline users.
+	RSS: fix typo in !rsstarget help.
+	RSS: fix rss list cleaning. Only items in the actual feed are kept.
+	Build system tested and fixed on windows.
+	Updated build system further. Now uses pretty macros for report.
+	Include ChangeLog, README and LICENSE in windist
+	Build system now decides wether to use EPOLL, POLL, SELECT or IOCP
+	HUB: prevent error and timeout callbacks on freed sockets.
+	RSS: escape usage of |s in feeds.
+	HUB: simplifying return path. remove update_state from main
+		socket_add call.
+	TRIGGER: react corretly on return value of command_register 
+		(Reported en_dator)
+	ESOCKET: fix return values of es_iocp_* functions
+	RSS: report moved target and bad feeds.
+	RSS: fix bug with empty path. (Reported maksalaatikko)
+	commands_register now returns error if command already exists.
+	ESOCKET: improve error handling. Should fix crash in accept_new_user
+		(Reported en_dator)
+	RSS: more memleaks fixed.
+	configure fix the libs in the tests.
+	USER: load in ip source list (reported en_dator).
+	TRIGGER: detect when command creation fails. (Reported SlimBlue)
+	Windows: add delayed close so all remaining data is written out,
+		fixed bug in accept_new_user (hub.c)
+	configure: use correct paths to determine which libs to use.
+	Fixed bug with kickautobanlength resetting to 0. defaultrights now
+		correct type. (reported Shaman3D)
+	RSS: another leak fixed.
+	GeoIP: now supports 1.3.x and 1.4.x transparantly. (Reported Bliss)
+	RSS: fixed memleaks.
+	GeoIP support added in !userinfo
+	Replaced email with a working one.
+	LUA: added Lua 5.1.x support.
+	USER: added lastip support (Req: ffrag)
+	NMDC: added CTM exploit ban.
+	RSS: added rss.silent to hide error messages.
+	RSS: reset errno before reporting html return code.
+	ESOCKET: always reset errno before reporting a timeout.
+	ESOCKET: in windows: check if socket is still connecting before 
+		resetting connect timeout. (Thanks r4zz0r)
+	ESOCKET: in windows: first delete node, then reinsert... (reported en_dator)
+	!userinfo now prints actual rights.
+	LUA: Added AccountRights and GroupRights functions.
+	RSS: Added target display in !rsslist
+	RSS: Added !rsstarget, send messages to users or groups.
+	RSS: handle timeouts better.
+	RSS: fix atom feeds
+	DNS: fix problem when request made before thread started.
+	XML: add attribute parsing.
+	RSS: Clear feedlist before load.
+	Fixed handling of WSAEWOULDBLOCK
+	Added IOCP connect polling internal to esocket
+	Attempt to fix feeds on windows.
+	esocket: fixed division by zero error in IOCP code.
+	esocket: succesful connections are now reported
+		to output callback.
+	Add RSS plugin.
+	Fix timer rules - obey rights setting.
+	Fixed custom rights mask.
+	Cosmetic fix in xml saving.
+	Fix bug in XML timer rule interval loading.
+	Added windows icon and build info.
+	More xml saving bugs.
+	Fixed bug in xml saving... again.
+	Added lua function AccountLastLogin() (Req maksalaatikko)
+	Fixed buf in xml saving for large xmls.
+	Fix hublist init.
+	Fix windows warning.
+	Added custom rights.
+	Rename Win32 tag define to disable warning.
+	Fix printing bug in !setlocale.
+	Split off flags printing: get rid of all the type-punning errors.
+	Removed unused searchlist.[ch]
+	Add banlistclient to pi_user files.
+	Fix pi_hublist dependency on pi_user.
+	Make lua plugin use generic plugin stuff.
+	Buildsys update. Plugins can now be omitted through configure.
+	Add sys_windows.h and README.windows to dist (Thanks en_dator).
+	Disable cache.* settings (forced to 1).
+	Fixed bug in kickmaxbantime. Do not accept 0 bantime.
+	Add Win32 in version string for Windows.
+	Close settings file after reading it.
+	Fixed xml.c escaping bug.
+	Compiles on windows.
+	Added xml.[ch] into svn and dist.
+	Added XML loading.
+	Don't accept spaces in chatroom names.
+	Added XML saving.
+	Fixed a return value bug in server_write.
+	Changed "Dropped" to "Refused" in !statuser
+	Added EventZombie: this is a zombie chatmessage.
+	Fixed esocket_check_connect error handling.
+	Fixed esocket_connect on windows (reported rick/XP9).
+	Fix !setlocale: set the LANGUAGE env variable to switch.
+	Fix printf on windows.
+	Fix trigger timer after reload.
+	Clean up build system
+	remove any trace of the cygbin dist.
+	Fix availability of crypt() on windows.
+	Invalid char in timestrings just ends the string (reported maksalaatikko).
+	Correctly delete timer rule when trigger is deleted (Reported FD).
+	Fix to make it build on mingw
+	Make timer trigger type accept standard time strings.
+	Added timer trigger type.
+	Fixed UserIP2 support (Thanks FleetCommand)
+	Fixed race in dns.c (don't free sockets that are still resolving).
+	Added dns.h to DISTFILES
+	Fixed hardban stuff.
+	Added blocked and allowed count.
+	Clean iplist before printing stats.
+	No USE_PTHREADDNS on windows.
+	Replace compile with real version.
+	Build system stable.
+	Clean windows build.
+	Fix build error in esocket.c
+	Cleaned up configure.ac
+	Added pthread async dns resolver
+	Extended error printing on socket error.
+	Loads of small random changes.
+	Removed command window in none-debug build.
+	Fixed file stat call in pi_trigger.c
+	Increased max buffer size that can be queued to windows in IOCP.
+	Improved error handling
+	Make release target work everywhere.
+	Delete all accounts on !load
+	Do not use %llu on windows. Use %I64u...
+	Do not use %Lu either... not in printf or scanf.
+	Do not use %llu in printf on windows. Use %I64u...
+	Modded pi_hublist.c
+	Added some statistics and automatic memory tuning for IOCP.
+	Eliminated superfluous |s in output.
+	Removed unecessary errno dependecy in buffer.c
+	Fix bug with OP rejoin.
+	Remove warings from esocket.
+	Fix assert in debug build when deleting chatroom.
+	Comment out all references to fnAcceptEx
+	Step back to using AcceptEx.
+	Added sys_windows.h
+	Fixed compiler warnings on windows.
+	Fixed compiler warnings on linux.
+	Fixed on windows again.
+	Fix build on linux.
+	Native Windows support.
+
+0.1.10:
+0.1.10-pre4:
+	banlist will list both IP and nick for dual bans (Req FleetCommand).
+	Send login password message in PM. Has disadvantages for some clients.
+	Added support for the pm flag on login triggers.
+	Fixed handling of EPOLLHUP
+	Added SetCommandRights() lua function. Allows you reassign the rights for every command.
+	Added ndelay setting.
+	Fix error message in pi_user.c
+	Fix 0 byte write bug (try saying that quickly :S)
+	Print error when trying to update hublist while no hublists configured.
+	Fix Salt generation in aqpasswd.c and user.c
+	Added RawToRights()
+	Removed some possibly troublesome characters from !pwgen.
+	Fixed bug in !configset IP address handling error message.
+	Fixed EventDisconnect.
+	Added ChatToRights and PmToRights lua functions.
+	Fix Ubuntu support.
+	Improved userlist layout. (General request)
+	Added userlimit.total (Req Bliss)
+	Fix speedentry filtering.
+	Fix oplist length estimate bug when user is made op and reconnects.
+	Fix reconnect bug when IP changed. (Thanks FleetCommand)
+	Fix zline bug (Thanks Sporos)
+	Fix bug in !userrestrict (Thanks Bliss)
+
+0.1.10-pre3:
+	Really fix bug with too many args for commands (Report FleetCommand)
+	Fix bug in delayed logout feature.
+	Correct nicklistcache size estimate bug.
+	Initialize nickchar map on boot up. (Report maksalaatikko)
+	Rights parsing in lua now supports + and -. (Report FleetCommand)
+	Fix bug with too many args for commands (Report FleetCommand)
+	Correctly handle return value from plugin function.
+		Fixes !massall bug (Report maksalaatikko).
+	Correctly pass on return values from proto functions in plugin.c
+	Print message with configuration value is locked (req Malte).
+	Add some extra stats for !statcache
+	Fixed bug with buffer reuse. Don't do it.
+	Added some DEBUG code.
+	Fix bug in locale settings.
+	Added commands getlocale/setlocale.
+	Fix clientbanlist and clientban when no message is provided.
+	Hardcode LC_NUMERIC to "C" to prevent problems with tag parsing.
+	Added nickchar controls, only for unregistered users.
+	Fixes to compile aquila on OS X
+	Added gcc 4.x.y warnings and fixes for them.
+	Fixed cachelist bug incase of kick.
+	Also, send update block zipped if possible.
+	Fixed bug in the nicklistcache that could cause disconnects.
+	Added UserIP2 support.
+	Increase buffersize a bit when using translatable strings.
+	If executable is replaced, !shutdown will start the new 
+		executable when running with option -r
+	Fixed bug in !userdel.
+	Fixes in server_handle_output().
+	Added aqdtinstall Ubuntu support.
+	rights list with space between "" now works too.
+		( "search,pm pmop" dl )
+	Fix time_print bug. Displays full length again.
+	change GetINFO behaviour, just assign N tokens with N = number of
+		users in the hub. (no longer unlimited).
+	Added fi_OP.po (Thanks maksalaatikko!)
+	Support \" in arguments. (Req FleetCommand)
+	No longer tag the user for asearch exception when sending
+		an oplist.
+	Added command !hardbanlist
+	Fix the ban deletion messages. (Thanks FleetCommand).
+	Make lua commands translatable. (Thanks maksalaatikko).
+	Rewrote server_handle_output. No longer partial string frees.
+	Fixed messages of rate.violations and rate.warnings (Thanks
+		maksalaatikko)
+	Added ASSERT in bf_append
+	Fix ASSERT in banlist_find_bynick_next
+	!userrestrict always look up rights with the accountname.
+	Fix bug with flushtimer that goes berserk.
+	Fix bugs with long output.
+	Use correct string for gettext in bf_printf/bf_vprintf
+	Fixed warnings
+	Fixed memleak in proto_nmdc_state_init();
+	Now use correct keywords for gettext string parsing.
+	Added all nmdc_interface.c and core_config.c configs to gettext.
+	Added gettext supports on caps
+	Fixed time_print to use ngettext for correct multiples.
+	Fixed time_print in greeting.
+	Added gettext.h to dist.
+	Fix crash in time_print
+	Added gettext support
+	Fixed !statbuffer crash.
+	!banlist now prints the op that banned.
+	pi_lua ConfigSet now also sends EVENT_CONFIG
+	Fixed buf. Extended !statbuffer now uses CAP_CONFIG.
+	Added pi_configlock.c. config values in configlock.conf cannot
+		be changed.
+	Changed error handling in hub.c
+	Rights can now be seperated with , too. 
+		(example: != user.defaultrights chat,search,pmop,dl,tag)
+	Switched to send/recv
+	Expanded !statbuffer... CAP_ADMIN only now.
+	Renamed unescape_string to nmdc_string_unescape
+	Fixed memleak in pi_hublist.c (Thanks PPK!)
+	Fixed bug with banreconnecttime. 0 disables instead of making it infinite.
+	Fixed possible stringlist corruption when error during server_output
+	Added a lot string_list ASSERT code for debug builds.
+	No longer required to add a "help string" for login triggers
+	Store $Quits with NULL as source to prevent accidental deletion when
+		reusing memory.
+	Fixed !statbw counterwrap bug.
+	Only update nicklistcache when myinfo send to users.
+	Added rate.myinfoop
+	updated aqpasswd and verli_import to the new password file layouts.
+	No longer send all MyINFOs to ops twice.
+	Loop accept to reduce polling overhead. accept 2048 events in 1 go.
+	Changed default to 8096 ips for anti-portblocker.
+	Added !statconn with portblocker stats.
+	Improved port blocker protection. Dynamic hashlist. 
+	Protection against port blockers.
+	Print memory in use by lua script in !luastat.
+	Disabled warnings for no search rights. Too annoying.
+	Added pmand broadcast flags for triggerrules.
+	Violation report now prints IP too.
+	Added disconnect event with reason. allows disconnect logging.
+	Added warnings when user lacks rights.
+	Added advanced glibc memory statistics.
+	Added warning if join rate is overstepped.
+	Added global "now" time variable to reduce gettimeofday/time calls
+	Report the last rate violation when a user gets banned.
+	On reconnect, only restore tthlist if the old user had one.
+	fix userlist layout
+	add lua SetUserRights()
+	Fix banlist bugs.
+	Refuse to delete a user as bot.
+	Fix bug when script is unloaded during creation and a bot is deleted.
+	Added warning for download IP mismatches too.
+	Added right locallan that allows exception on the ip check 
+		in searches and ctms for unroutable addresses.
+	Never add a violations hardban for owners!!
+	$BotINFO is now warnings rate iso chatrate.
+	Add warning if user banned for flooding.
+	Fix cpu detection for other platforms.
+	Add reconnect ban after clone check.
+	Added violation message, start with full violation credit.
+	Added violation rate controls.
+	banlist command now works.
+	Kicked users do not qualify for delayedlogout.
+	Cpu measurement is now relative to number of processes.
+	Added getHubVersion() (Req plop).
+	Added delayedlogout feature.
+	Default groups of verli_import are now identical to those of aqpasswd.
+	Added ddch_import
+
+0.1.10-pre2:
+	Add cpuinfo in !statcpu
+	Don't build for windows if debug build.
+	Verify IP, nick and mode in searches.
+	Protection from user disconnects in an idle hub.
+	Added -r cli options to auto restart the hub if it crashes or exits.
+	Cleaned up defaults.
+	Added support for EVENT_REDIRECT for $Forcemove
+	Added support for EVENT_KICK and EVENT_BAN.
+	Mention nick in warning if user cannot be downloaded from. 
+		(Req maksalaatikko)
+	Replaced string based research to TTH based research.
+
+0.1.10-pre1:
+	users with the "group" right can no longer downgrade higher users.
+		(Thanks Upgrade)
+	Put a rate limit on $HubINFO
+	Expanded build system to allow for runtime profile optimization.
+	Fixed Chatroom bug. Rooms with no settings are now not autojoin.
+	chatlog timestamps
+	!whoip now supports networks.
+	!shutdown now sends warning to all users.
+	Fixed random timeout problems.
+	Added function plugin_perror ();
+	Expanded save error handling.
+	Added CAP_REDIRECT. (Req popular :P)
+	Long, long postponed cleaning up of nmdc module file structure.
+	Added hub.ReconnectBantime. Users reconnecting faster than this are refused.
+		(Req maksalaatikko)
+	Fork twice to get rid of controlling terminal for good in -d mode.
+	Added multiline support to config values and text triggers.
+	Bots have key by default.
+	Fixes default settings for hub.buffer*timeout
+	Make stuff compile on cygwin again.
+	Make banned users a seperate counter from forcemoves.
+	Added CFG_ELEM_CAP support to LUA Set/GetConfig
+	Split up active/passive search intervals (Req MrFantastic2006)
+	Prevent endless password guessing (Req maksalaatikko)
+	Seperate !report target from sysreport target
+	Rename !rulelist to !triggerlist (suggestion Cyber_Ninja)
+	Extended lua support:
+		- LUA function UserIsOnline()
+		- improved Bot handling. now supports event handling.
+
+0.1.9:
+	!ban kicks user again. (Thanks DZ, Bliss)
+	Fixed printing of hub.buffer*limit while setting. (Thanks Charmed)
+	Added uptime to hub greeting. (request Charmed)
+	Fix building on armv5b-unknown-linux-gnu (Thanks Malte1)
+	Fix debug build without zline. (Thanks Malte1)
+	Fix $GetNickList reate warning. (Thanks DZ)
+	Fix ZLib detection bugs
+	Fixed bug in !pwgen (thanks Charmed)
+	Added CFG_ELEM_MEMSIZE to avoid weird problem. (Seems to be 
+		long long <--> long implicit conversion related).
+	Make the locking work on cygwin
+	Right nosrchlimit skips researches.
+	Fixed multiple entries per client in clientbanlist.
+	Added support for gentoo, ubuntu, debian, suse and fedora in aqdtinstall.
+	Added -v version cli option
+	Fix crash in server_write_credit (Thanks maksalaatikko)
+	aqdtinstall now creates aquila.pid too.
+	fixed bug in hub.c. bytesize configs are long long.
+	nicks for !ban and !banip are now looked for in iplog too.
+	Fixed some printf "%*s" bugs all over the place.
+	Fixed bug in pi_hublist registering.
+	Added configure check to see if epoll_wait is implemented.
+	Changed config type for hub.buffer* to BYTESIZE.
+	Changed the default timeouts for buffering and overflow.
+	Added daemonizing, changing working directory and pid file options.
+	Cleanup userinfo layout, removed period after nick for clickability (Req FleetCommand)
+	Added regging op, reg time and lastlogin time to accounts. (Req maksalaatikko)
+	timeoutbuffering and timeoutoverflow are now configurable.
+	Refuse nick of logged in or regged user as password.
+	Mention in !userinfo if password is not set. (Req maksalaatikko)
+	Added (hidden) !leave command to chatrooms. (Req abaddon)
+	Added command suggestion when passwd is not yet set (Req maksalaatikko);
+	Verify PM before sending event.
+	Fixed crash in leackybucket with bad setting. (Report maksalaatikko)
+	Added statefulness to buffering system: more aggressive timouts.
+	Fix bug in credit system.
+	Fix bug in cygwin platform settings
+	Added hublist.silent setting to ignore errors during hublist. (Request maksalaatikko)
+	Fix bug in cygdist target.
+	If platform is cygwin, build aquila as a windows program. (This gets
+		rid of the shell window).
+	If epoll_wait is absent, ALLOW_EPOLL is disabled.
+	Changed cache_count macro to limit wasting buffer memory.
+	Fix bug in banlist_del_* (Thanks FleetCommand)
+	Initial version string now printed by hubsec iso HubSoft.
+	Added cygdist and cygsrc targets for cygwin distribution.
+	Fixed buferring system. Softban onw only triggers fast timeout, hardlimit triggers data dropping
+		and BufferTotalLimit limits total buffering space of the hub.
+	LUA function GetUserMyINFO()
+	Changed buffering system. Now has soft and hardlimit. Softlimit increases 
+		timeout to 1s before disconnect, hardlimit drops data. configurable.
+		Added config options hub.BufferSoftLimit, hub.BufferHardLimit
+	Added a GetUserSupports() LUA function. (Request PotHead)
+	Added a statmem command that returns the amoun tof buffered output data.
+	Fixed crash in banlist (Thanks curse).
+	Fixed bug in FORCEMOVE, it works again now.(Thanks Zexx86)
+	esocket_close now sets state to SOCKSTATE_CLOSED.
+	Added buffer clearing before writing out error message in pi_hublist.c
+	Fixed possible out of bound writing in pi_hublist.c (at read returning 0 bytes). (Thanks FleetCommand)
+	At ASSERT, stracetrace now coredumps.
+	Fixed some debug printfs in the pi_hublist code.
+	Removed stacktrace handler for signals: doesn't work anyway.
+	Fix pi_hublist default timeout.
+	Auto-remove trailing newlines in chat/pm messages.
+	Fixed a bunch of esocket bugs:
+		- consistancy over epoll/poll/select
+		- correctly init esocket->error on error event
+		- fix default timeout calculation
+	Fixed hublist registering key generation.
+	Added reporting of hublist registering when started with !hublist cmd.
+	Increased OVERFLOW timeout. Could be dangerous.
+	Fix: don't use timer.reset if time is equal.
+	Fixed: Chat* lua commands from hubsec in script init crashed hub on boot.
+	Added GetUserGroup, GroupFind and AccountFind functions.
+	Fixed crash with zombie bug.
+	Added client source IP requirement. Added CAP_SOURCEVERIFY to active check.
+	Clear banlists before load!
+	Fixed pi_hublist.c : buf when corrupt input.
+	Fixed poll build.
+	Fix crash with lua kick and ban functions.
+	Fix error message when unloading an unexisting script.
+	Added some pretty status code to the configure message.
+	Fix error message printing in pi_hublist.c
+	Fix that crash with the MyINFO update code too.
+	Point config name to correct config value :s.
+	Fix crash when tag was toolong, KickOnTagTooLong is set and the user has CAP_TAG assigned.
+	Added tag.KickOnTagTooLong. If this is set to 0, the tags are just hidden.
+	Print time remaining on time bans.
+	Added OP name to kick and ban messages.
+	Cleaned up kick and ban messages
+	Fixed ZPipe user counter. (reported FleetCommand)
+	whoip now returns all users with specified IP, not just the first hit (request FleetCommand).
+	Preliminary support for registering banning OP.
+	Merged banlistnick and banlist. Easier ban management by user (request FleetCommand).
+	Fixed bug with EventConfig : now correctly passes on new config element name.
+	Never load a lua script twice, replace the old version.
+	Fixed clientban (reported FleetCommand)
+	KickBanRedirect support was incomplete. (Reported maksalaatikko)
+	statbot fixed. was broken by cpu stats changes. (reported Blade)
+	Redid cpu stats again.
+	if redirection address is empty, user is just dropped (request FleetCommand).
+	Fixed permission error in configset with settings caps
+	Fixed statcpu
+	Fixed memleak in pi_chatroom.c
+	Added IP range bans.
+	CAP_SPAM now unlimits PMs too.
+	Fixed type-punned warning.
+	depend selection of -p or -pg on presence of gprof, not gcc
+	LUA command handlers now get 2 parameters: first is the nick the second a table with all command arguments.
+	!hublist command now requires CAP_CONFIG
+	Fixed tools/Makefile.am to support none-GNU make. (reported plop)
+	added configure target --enable-profiler
+	Added fix so we can access user even in PreLogin state. NOT MT SAFE.
+	Fix UserIsRegistered and UserIsZombie (report and fix FleetCommand)
+	Fix crash when loading lua.conf when registered scripts do not exist. (reported FleetCommand)
+	Fix a few bugs in aqdtinstall
+	Updating configure.ac: make lua stuff behave correctly.
+	LUA: only register for events if one of the scripts demands it
+	Added check for LUA version >= 5.0.x.
+	Fixed bunch of warnings on cygwin builds.
+	Fixed printing of rights in LUA
+	Moved all hub.h includes to prevent warnings on Cygwin builds
+	Fixed building pi_hublist.c under cygwin
+	Bugfix for events without user parameter.
+	Added printing of parsing errors during load.
+	Added expanded proto and plugin to support lua RawToNick and RawToAll
+	Fixed bug in timer reset. Should reschedule timer if the new time is earlier than the original time.
+	A string returned by a lua functions is used as command output
+	Fixed CAP_TAG overrides client bans. (reported maksalaatikko)
+	Added warn command
+	Added seperate KickBanRedirect
+	fixed bug in statusers
+
+	added release target to makefile
+	added OP nick in ban message.
+	defaultbanmessage: this message will be send to ALL banned users by default. (suggestion maksalaatikko)
+	added message flushing before disconnect. This should display any messages send by plugings.
+	CAP_TAG overrides client bans. (suggestion maksalaatikko)
+	expanded statuser
+	added right nosrchlimit (request maksalaatikko)
+	send unmodified user MyINFO to ops at user login too. (reported maksalaatikko)
+	assign the share and tag right to any user without a password if their account has it. (suggestion maksalaatikko)
+	drop empty chatlines and useless spaces at the end.
+	Fixed --disable-zline option
+	Nickbans now work for registered users.
+	Fixed yet another bug in a command handler.
+
+	Fixed problem with double nicks. (Reported by Cyber_Ninja)
+		- crash when using nick of chatroom
+		- disconnect any other user.
+	Fixed illegal memory reference in input handling.
+	Fixed possible crash when disconnecting user.
+	Improved pi_hublist error handling.
+	Fixed and moved escape_string from nmdc_utils.c to pi_hublist.c
+	Added pi_hublist.c Hublist registering (thanks to ZeXx86 for example code)
+	Fixed copyright message in headers
+	Fixed FD restrictions on cygwin
+	Fixed bug in ruleadd
+	adjusted rbt.c header.
+	Added load and save functionality in pi_lua.c
+	Added *all* events in the event handler support.
+	Rewrote all original lua commands. Removed zexx86 (c) message.
+	Changed file headers to GPL suggested header.
+	Fixed bug with !ruleadd
+	removed assert, allowing kicking of self.
+	fixed bug in help. Can no longer see any commands that aren't available.
+	added LUA support... (thanks to ZeXx86 for example code)
+	added unzombie command	
+	added protocol proto_send_direct (which was old proto_send)
+	rights parsing now obeys last setting for a right. 
+		 -cap cap = cap
+		cap -cap  = -cap
+	user with correct passwd can replace ghost even when using a different IP
+	check third nick in PMs too. Security.
+	fixed bugs in pm source verification.
+	Force \0 termination of all strncpy's.
+	Fixed bug in aqpasswd (thanks BSOD2600 for reporting)
+	Ported to work on cygwin, thank you to BSOD2600 for testing.
+		included code from Motoyuki Kasahara, see README.getaddrinfo
+	IP right-click on ban: Curse and Cyber_Ninja ( IP is now clickable after a kick or ban )
+	fix no autojoin in chatroom module
+
+0.1.8:
+	CAP_SPAM now also excempts from chat rates. This allows for !kicks to be gives in large groups.
+	Moved !crash command to DEBUG build only.
+	Start a user with full search quota to prevent autosearches from triggering warnings.
+	Decrease the right counter in hub.c
+	Fixed "buffering" counter.
+
+	Fixed crash. Active users can now receive passive search results.
+	Added DEBUG warning in !statcpu command.
+	Added check for online status before sending search result to user.
+	Added more cache flush debugging info.
+	Fixed bug in hub.c buffer size accounting.
+	Fixed message when disabling reporting.
+	Added crash handler (stacktracing).
+	Added password length parameter. Default is now 8 iso 64.
+	Added both incoming and outgoing results counters. 
+	Add warnings for overstepping various boundaries + warnings rate counter.
+	Fixed a few bugs in pi_statistics.c
+	Changed output queueing mechanism.
+	Added buffering user counter.
+	Changed some pi_statistics.c functions to using output iso local buffer.
+	Added !crash function.
+
+	Fix CAP_TAG: do not drop user and do not leak memory.
+	Fixed double free in zline()
+	Added some checking in stringlist
+	Fixed illegal ref in pi_trigger.c
+	Reduced hub to processing 1024 events at a time
+	Fix free bug in cache rebuilding.
+	Don't queue OpList with a source user to prevent purging.
+	Don't purge cache.results and cache.messages on user exit. no longer useful.
+	Force cache rebuild on first zpipe/zline user.
+	Purge searches still cached if a new one is queued.
+	No longer queue messages in global list, just count them.
+	Fix bugs in exception buffer creation. Keep exception counters consistent.
+	Delete protocol specific data in freelist with other memory.
+	Make the cache_* functions use bf_size iso bf_used.
+	Change timeout behaviour of queueing to be consistent.
+
+	Fixed bug in passive search handling.
+	Added ZPipe handling
+	Moved to userbased stringstorage iso global list.
+	Verify RCTM source nick.
+	Added repeated search handling.
+		Aquila caches a configurable number of searches. If those
+		searches are repeated too soon, those are dropped. If they
+		are repeated within a configurable period, only users that
+		joined in this period are searched.
+	Fixed MyINFO update share checking.
+	Added iplog module
+	Fix time out issues. Dead connections should now be timed out correctly. 
+	Disable Naggle on user connections: we do our own queueing. TEST
+	Fixed bug in pi_trigger.c: text rules are now correctly printed.
+	Fix some stuff in aqdtinstall
+	Owner right is now printed.
+	Fixed userlist problem. There should no longer be "invisible users".
+	You can no longer redirect users higher than you.
+	Added say command again.
+	Added many rights fixes:
+		- the owner right now overrides all restrictions.
+		- user with the user right can no longer delete accounts 
+                   of users with more rights.
+	Added sharemin formatting. Not ideal, but it should work.
+
+0.1.7:
+	Fixed security issue. No longer possible to use !usergroup to jump
+	to owner group.
+
+0.1.6:
+	Enabled drop command. It was implemented, but not registered.
+	Fixed a few bugs in the poll() implementation. It should now
+	work.
+
+0.1.5:
+	Fix in !configset. setting string variables no longer causes
+	crash
+
+0.1.4:
+	Added target dtinstall
+	Added message when user is refused because of join limit.
+	aqdtinstall updated.
+		- added command line arguments
+		- added generic daemontools install
+	All server_ functions can now be safely called with a NULL for
+		client_t *.
+	Fixed a few mistakes in nmdc_protocol.c that could cause a crash
+		when getting an EPIPE.
+	Added some warning to pi_user.c when settings userlimits.
+	Added support for poll() in configure
+	Added support for poll() in esocket
+	Fixed some changelog mistakes.
+
+0.1.3:
+	Added !pwgen. This will generate a 63 byte random passwd for yourself
+		or a user.
+	Changed !useradd. If user with relevant nick logged in, he is warned
+		of his new reg and told to set a passwd and log in again. 
+		OP is notified of this.
+	Slot rule fix. If a hub allows 0 slots, do not check users with 0 slots.
+	Added drop command. Identical to kick except it does not redirect.
+	Added aqdtinstall script. Daemontools install script.
+	Fixed crash in !ruleadd when no help message (Thank you Friz.cZ)
+	Added fix for possible crash with corrupt search result.                                                          
+	Expanded server_add_port to add support for addresses.
+	Added Fix to hashlist to protect against overlong nicklengths
+	Added NMDC.ListenAddress to configure listen IP
+
+0.1.2:
+	Fix a few bugs in rebuild_myinfo that could crash the hub.
+	Fix a off-by-one read in unescape_string
+	Fix a few signed errors. 
+	Fix crash when a EPIPE happened on a forcemove.
+	Split nmdc_handle_token into multiple functions.
+	Fix valgrind warning by clearing hashlist struct.
+	Fix illegal pointer reference in nmdc_handle_input
+	Fix server_settimeout... timeouts work again.
+	Do not call proto.handle_input if there are no buffers.
+	init hashlist before use.
+	Added indent and commit target.
+	Fixed hub send a lot of unnecessary |s.
+
+0.1.1:
+	Fixed bug in pm handling. no longer extra \0 chars attached.
+		(Thank you FleetCommand)
+	Added check for linux/eventpoll.h to see if kernel supports epoll.
+	OS X support thanks to Dj_Offset (Jan Vidar Krey)
+	Fixed command handler: now correctly handles commands with more than
+		255 arguments.
+	Fixed bf_printf and bf_vprintf to correctly update buf->e if the
+		buffer overflows.
+
+0.1:
+	Released version.
+
+0.0.1:
+	Initial version
+	All version with numbers in 0.0.400-0.0.500 range are older
+	version where the last number is a SVN revision.

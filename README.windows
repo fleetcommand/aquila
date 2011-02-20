@@ -1,0 +1,30 @@
+to build successfully for windows without needing cygwin you have to create
+a directory lib in src/ with:
+
+src/lib/libcrypt.a
+src/lib/liblua.a
+src/lib/libz.a
+
+Lua:
+   5.0:
+	for the liblua, use the static library from lua5_0_3_Win32_mingw3_lib.zip
+	  (rename liblua50.a to liblua.a or use --with-lua-suffix=50)
+   5.1:
+	for the liblua, use the static library from lua5_1_1_Win32_mingw3_lib.zip
+	  (rename liblua51.a to liblua.a or use --with-lua-suffix=51)
+
+RRD:
+   download the windows RRDtool SDK from http://www.gknw.net/mirror/rrdtool/dev/
+   unzip it somewhere and use configure options:
+	--enable-rrd --with-rrd-prefix=/path/to/archive/
+
+   for example:
+	unzipping archive rrdtool-1.2.13-sdk-w32.zip it to /d/aquila/
+	--enable-rrd --with-rrd-prefix=/d/aquila/rrdtool-1.2.13-sdk-w32
+
+BUIDLING:
+	configure with:
+		./configure --disable-nls --disable-geoip --with-lua-prefix=/usr/local
+
+	build with:
+		make

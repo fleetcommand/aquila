@@ -1,0 +1,23 @@
+     ../src/builtincmd.c \
+     ../src/commands.c \
+     ../src/nmdc_protocol.c \
+     ../src/nmdc_interface.c \
+     ../src/plugin.c \
+     ../src/utils.c \
+     ../src/pi_statistics.c \
+     ../src/pi_chatlog.c \
+     ../src/pi_chatroom.c \
+     ../src/pi_hublist.c \
+     ../src/pi_chatlog.c \
+     ../src/pi_lua.c \
+     ../src/pi_trigger.c \
+     ../src/pi_user.c \
+     ../src/pi_iplog.c \
+     ../src/hub.c \
+     ../src/cap.c \
+     ../src/core_config.c \
+     ../src/flags.c \
+     ../src/xml.c \
+     ../src/pi_statbot.c \
+     ../src/pi_rss.c \
+     ../src/pi_rrd.c

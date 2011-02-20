@@ -1,0 +1,393 @@
+#!/bin/bash
+
+#
+# Settings
+#
+PREFIX=@exec_prefix@
+
+DEFAULT_USER="aquila"
+DEFAULT_GROUP="aquila"
+DEFAULT_SHELL="/bin/false"
+DEFAULT_HOME="/home/${DEFAULT_USER}"
+
+CONFIGFILES="accounts.conf chatroom.conf clientbanlist.conf hardban.conf hub.conf softban.conf restrict.conf lua.conf trigger.conf lua.conf aquila.pid"
+
+unset USER
+unset GROUP
+unset HOME
+unset USERSHELL
+unset ECHO
+unset dohelp
+unset force
+unset verbose
+
+if [ -z "${distro}" ];
+then
+        if [ -f /etc/lsb-release ]
+        then
+                distro=`cat /etc/lsb-release | head -n 1 | cut -d '=' -f 2`
+        else if [ -f /etc/debian_version ]
+        then
+                distro=Debian
+        else
+                distro=`cat /etc/*-release | head -n 1 | cut -d' ' -f 1`
+        fi
+        fi
+fi
+
+while [ -n "$1" ];
+do
+	option=$1;
+	case $option in
+		-u|--user)
+			USER=$2;
+			shift;
+			;;
+		-g|--group)
+			GROUP=$2;
+			shift;
+			;;
+		-d|--directory)
+			HOME=$2;
+			shift;
+			;;
+		-s|--shell)
+			USERSHELL=$2;
+			shift;
+			;;
+		-p|--prefix)
+			PREFIX=$2;
+			shift;
+			;;
+		-c|--service)
+			SERVICE=$2;
+			shift;
+			;;
+		-f|--force)
+			force=1;
+			;;
+		-v|--verbose)
+			verbose=1;
+			;;
+		-h|--help)
+			verbose=1;
+			dohelp=1;
+			;;
+		--dry-run)
+			ECHO='echo - ';
+			;;
+	esac;
+	shift;
+done;
+
+if [ ! -n "${USER}" ];
+then
+	USER=${DEFAULT_USER}
+fi
+
+if [ ! -n "${GROUP}" ];
+then
+	GROUP=${DEFAULT_GROUP}
+fi
+
+if [ ! -n "${HOME}" ];
+then
+	HOME="/home/${USER}"
+fi;
+
+if [ ! -n "${USERSHELL}" ];
+then
+	USERSHELL=/bin/false
+fi;
+
+if [ -n "${dohelp}" ];
+then
+	echo `basename ${0}`": Install Aquila with Daemontools support."
+	echo " User related options: These control the settings related to the user that will run Aquila."
+	echo " -u, --user <user>                : user name.           (default: ${DEFAULT_USER})"
+	echo " -g, --group <group>              : user group.          (default: ${DEFAULT_GROUP})"
+	echo " -s, --shell <shell>              : user shell.          (default: ${DEFAULT_SHELL})"
+	echo " -d, --directory <home directory> : user home directory. (default: ${DEFAULT_HOME})"
+	echo "                In this directory comes the daemontools service files."
+	echo
+	echo "If you are sure daemontools is instaled, but this script does not detect it,"
+	echo "use the following option to enable detection."
+	echo " -c, --service <service directory>: point this to the service directory of your"
+	echo "                daemontools install"
+	echo
+	echo " Generic options."
+	echo " -h, --help			: This help"
+	echo " -v, --verbose			: Verbose. Print settings."
+	echo
+fi;
+
+if [ -n "${verbose}" ];
+then
+	echo "Settings:"
+	echo "  USER:GROUP " ${USER}:${GROUP}
+	echo "  HOME       " ${HOME}
+	echo "  USERSHELL  " ${USERSHELL}
+	echo "  PREFIX     " ${PREFIX}
+	if [ -n "${force}" ];
+	then
+		echo "  Forcing install."
+	fi;
+fi;
+
+if [ -n "${dohelp}" ];
+then
+	exit;
+fi;
+
+#
+# daemontools source install function
+#
+
+function require() {
+	if ! which $1 >/dev/null 2>&1;
+	then
+		echo "This install needs $1 to succeed."
+		if test -n "${INSTALLHINT}";
+		then
+			echo "You can try: ${INSTALLHINT} $1"
+		fi
+		exit;
+	fi;
+}
+
+function dtsrcinstall() {
+	require wget
+	require patch
+	mkdir /package
+	chmod 1755 /package
+	cd /package
+	wget http://cr.yp.to/daemontools/daemontools-0.76.tar.gz
+	tar xzvf daemontools-0.76.tar.gz
+	rm -f daemontools-0.76.tar.gz
+	cd admin/daemontools-0.76/src
+	wget http://www.qmailrocks.org/downloads/patches/daemontools-0.76.errno.patch
+	patch < daemontools-0.76.errno.patch
+	cd ..
+	package/install
+	return $?
+}
+
+#
+# Determine linux flavour
+#
+
+case $distro in
+	Gentoo)
+		INSTALLHINT="emerge"
+		INSTALLDT="emerge daemontools"
+		INSTALLDTHELP="Oops... how did you make emerge fail??"
+		if [ -z "${SERVICE}" ];
+		then
+			SERVICE="/service"
+		fi
+		RCDT="rc-update add svscan default"
+		RCDTDETECT="rc-status default | grep svscan | grep started > /dev/null"
+		RCSTART="/etc/init.d/svscan start"
+		RCSTARTDETECT="ps -ef | grep /usr/bin/svscan | grep -v grep > /dev/null"
+		;;
+	Debian)
+		INSTALLHINT="apt-get install"
+		INSTALLDT="apt-get install daemontools-installer && build-daemontools"
+		INSTALLDTHELP="If the package is not found, please make sure you have the contrib tree in your /etc/apt/sources.list. 
+The line should read something like:
+
+   deb http://ftp.debian.org/debian/ stable main contrib
+   
+Don't forget to do 
+
+   apt-get update
+   
+after you change the line!
+"	
+		SERVICE="/service"
+		RCDT=""
+		RCDTDETECT="true"
+		RCSTART="/command/svscanboot&"
+		RCSTARTDETECT="true"
+		;;
+        Ubuntu)   
+                INSTALLHINT="apt-get install "
+                INSTALLDT="apt-get install daemontools-installer && build-daemtools"
+                INSTALLDTHELP="If the package is not found, please make sure you have the contrib tree in your /etc/apt/sources.list.
+Add a line like:
+
+   deb http://archive.ubuntu.com/ubuntu/ dapper multiverse
+   
+Don't forget to do 
+
+   apt-get update
+   
+after you add the line!
+"       
+                SERVICE="/service"
+                RCDT=""
+                RCDTDETECT="true"
+                RCSTART="/command/svscanboot&"
+                RCSTARTDETECT="true"
+                ;;
+	Fedora)
+		INSTALLHINT="yum install"
+		INSTALLDT="dtsrcinstall"
+		INSTALLDTHELP="Ehh?? how did you do that??"
+		SERVICE="/service"
+		RCDT=""
+		RCDETECT="true"
+		RCSTART=""
+		RCSTARTDETECT="true"
+		;;
+	SUSE)
+		INSTALLHINT="yast -i"
+		INSTALLDT="dtsrcinstall"
+		INSTALLDTHELP="Ehh?? how did you do that??"
+		SERVICE="/service"
+		RCDT=""
+		RCDETECT="true"
+		RCSTART=""
+		RCSTARTDETECT="true"
+		;;
+	*)
+		echo "Unsupported linux flavour, please report:"
+		echo "  * name of distribution"
+		echo "  * the name of the release file (most likely /etc/<distribution>-release)"
+		echo "  * command to install daemontools package"
+		echo "  * the default service directory of the daemontools package"
+		echo "  * the command to add daemontools to the boot up sequence"
+		echo "  * detected as ${distro}"
+		echo " Use --force to force daemontools installation from source."
+		echo "Thank you."
+		exit;
+		;;
+esac
+
+if [ -d ${SERVICE} ];
+then
+	echo Daemontools Installed.
+else
+	if ! eval ${ECHO} ${INSTALLDT};
+	then
+		echo "Install failed."
+		echo
+		echo "${INSTALLDTHELP}"
+		exit;
+	fi
+fi
+
+if ! grep ${GROUP} /etc/group >/dev/null;
+then
+	echo "Creating group ${GROUP}..."
+	${ECHO} groupadd ${GROUP}
+fi
+if ! grep ${USER} /etc/passwd > /dev/null;
+then
+	echo "Creating user ${USER} with shell ${USERSHELL}..."
+	${ECHO} useradd -g ${GROUP} -s ${USERSHELL} ${USER}
+fi
+
+if ! test -d ${HOME}/service;
+then
+	echo "Creating directories..."
+	${ECHO} mkdir -p --verbose ${HOME}/service
+	${ECHO} mkdir -p --verbose ${HOME}/service/supervise
+	${ECHO} mkdir -p --verbose ${HOME}/service/log
+	${ECHO} mkdir -p --verbose ${HOME}/service/log/supervise
+	${ECHO} mkdir -p --verbose ${HOME}/service/log/main
+	${ECHO} chown -R root:root ${HOME}/service
+	${ECHO} chown aquila:aquila ${HOME}/service/log/main
+fi;
+
+echo "Creating config files..."
+for i in ${CONFIGFILES};
+do
+	${ECHO} touch ${HOME}/service/$i
+	${ECHO} chmod a-rwx,u+rw ${HOME}/service/$i
+	${ECHO} chown aquila:aquila ${HOME}/service/$i
+done;
+
+echo "Creating run files..."
+# installing run files
+if [ ! -n "${ECHO}" ];
+then
+
+cat > ${HOME}/service/run <<EOF
+#!/bin/sh
+
+ulimit -n 20480
+ulimit -c 20971510
+exec setuidgid ${USER} ${PREFIX}/bin/aquila 2>&1
+EOF
+
+cat > ${HOME}/service/log/run <<EOF
+#!/bin/sh
+exec setuidgid ${USER} multilog t s9999999 ./main
+EOF
+
+else
+	echo " creating" ${HOME}/service/run
+	echo " creating" ${HOME}/service/log/run
+fi;
+
+#making run files executable.
+${ECHO} chmod a-w,a+rx ${HOME}/service/run
+${ECHO} chmod a-w,a+rx ${HOME}/service/log/run
+
+#warning user.
+echo
+
+echo "Aquila Daemontools service directory installed in ${HOME}"
+echo
+
+WARNING=""
+
+if ! test -d ${SERVICE}/aquila
+then
+WARNING="${WARNING}
+Do not forget: 
+ - to add a link from the main service directory to the aquila service
+   directory:
+        ln -s ${HOME}/service ${SERVICE}/aquila
+"
+fi
+
+if test "${RCDT}" != ""
+then
+if ! eval ${RCDTDETECT}
+then
+WARNING="${WARNING}
+ - Add daemontools to standard system boot up:
+        ${RCDT}
+"
+fi
+fi
+
+if ! test -z "${WARNING}"
+then
+	echo "${WARNING}"
+	echo -n "If you have done the above, "
+fi
+
+echo "Aquila will be started at system boot and restarted should it stop."
+echo
+
+if  test ! -s ${HOME}/service/accounts.conf
+then
+	echo "Do not forget to create a hub owner account:"
+	echo 
+	echo "  aqpasswd ${HOME}/service/accounts.conf nick password"
+	echo 
+	echo "Please replace \"nick\" with the hubowner nick and \"password\" with his password."
+	echo
+fi
+
+if ! eval ${RCSTARTDETECT}
+then
+cat <<EOF
+To start the service now, do:
+        ${RCSTART}
+EOF
+fi
+

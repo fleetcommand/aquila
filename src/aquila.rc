@@ -1,0 +1,66 @@
+/*
+ *  (C) Copyright 2006 Johan Verrept (jove@users.berlios.de)    
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program; if not, write to the Free Software
+ *   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ */
+
+#include "winver.h"
+#include "defaults.h"
+
+#ifdef DEBUG
+#define FFM_DEBUG 	VS_FF_DEBUG
+#else
+#define FFM_DEBUG	0
+#endif
+
+#if AQVER_SUB
+#define FFM_PRERELEASE	VS_FF_PRERELEASE
+#else
+#define FFM_PRERELEASE	0
+#endif
+
+icon	ICON "../contrib/aquila.ico"
+
+VS_VERSION_INFO VERSIONINFO
+
+FILEVERSION	AQVER_MAJOR,AQVER_MINOR,AQVER_REV,AQVER_SUB
+PRODUCTVERSION  AQVER_MAJOR,AQVER_MINOR,AQVER_REV,AQVER_SUB
+FILEFLAGSMASK	VS_FF_DEBUG | VS_FF_PRERELEASE
+FILEFLAGS	FFM_DEBUG | FFM_PRERELEASE
+FILEOS		VOS__WINDOWS32
+FILETYPE	VFT_APP
+FILESUBTYPE	0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		/* "lang-charset" LLLLCCCC = (UK English, Unicode) */
+		BLOCK "080904B0"
+		BEGIN
+			VALUE	"CompanyName", 		HUBSOFT_AUTHOR
+			VALUE	"ProductName",		PACKAGE_NAME
+			VALUE	"FileDescription",	HUBSOFT_HOMEPAGE
+			VALUE	"InternalFilename",	PACKAGE
+			VALUE	"OriginalFilename",	PACKAGE
+			VALUE	"FileVersion",		VERSION
+			VALUE	"ProductVersion",	VERSION
+			VALUE	"LegalCopyright",	"Copyright \251 2005-2007 Johan Verrept."
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation",	0x809, 1200
+	END
+END

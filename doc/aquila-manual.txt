@@ -1,0 +1,456 @@
+How to use Aquila
+
+Index
+
+0) Index
+1) Generic user commands
+2) Operator commnds
+3) User Management
+  3.1) Capabilities
+  3.2) Group Management
+  3.3) User Management
+4) Configuration Management
+  4.1) Generic Configuration
+  4.2) Chat Rooms
+  4.3) Triggers
+    4.3.1) Overview
+    4.3.2) Triggers
+    4.3.3) Rules
+5) Statistics
+
+
+1) Generic User Commands
+
+This section deals with generic commands that are available to all users. These are simple commands that make life a bit easier in the hub. There are three such commands, help, myip and passwd.
+
+The help command shows you a list of commands you can use and a short
+Help string. If you specify a name after the command, it will only show you the help string of the command with that name.
+
+The myip command will show you your IP address as it is seen by the hub.
+This is very useful for configuring clients for active mode.
+
+The passwd command can be used by registered users to change their password.
+Users with user management capabilities can use this command to change the password of other users too.
+
+
+2) Operator Commnds
+
+This section deals with the commands available to operators. These are the traditional kick and ban commands. 
+
+There is only one kick command. It will kick a user and ban them for the configured amount of time (see config:kickautobanlength). If you add "_ban_" to the kick message, Aquila will add an indefinate ipban and a nickban too.
+
+There are two main groups of ban commands. Normal ban commands that work by specifying the nick and those that work solely on IPs.
+
+You can ban and unban IPs with the commands banip and unbanip. These accept IPs or nicks as the argument.
+
+You can ban and unban users by nick with the commands ban, bannick and unban. The bannick command will only ban a user by nick, not by IP. The ban command will add both ban types. bannick and unban can be used on users which are not online, ban cannot. They only accept nicks as arguments.
+
+There is one last ban type (hard ipban) that is only available to the Hub Owner. The hard ipban bans an IP in such a way even a registered user is affected by it (up to and including the hub owner, so be careful!).
+
+3) User Management
+
+3.1) Rights
+
+Rights are at the base of the Aquila authentication and authorization mechanism. A user has a group, but the group is nothing more than an easy way of assigning rights to (a group of) users.
+Rights determine which commands you get to see, and use, when you do !help. They control if you need to share, if you have a key, if you can kick, ban, hardban and so on.
+
+ 	chat		Allows the user to chat in main window.
+	search		Allows user to search the hub for files.
+	pmop		Allows the user to send private messages to OPs only.
+	pm		Allows the user to send private messages to anyone.
+	dl		Allows user to download files.
+	share		Allows users to circumvent the share requirements.
+	key		Awards the user the much desired "key".
+	kick		Allows the user to kick other users.
+	ban		Allows the user to ban other users.
+	config		Allows the user to edit the configuration of the hub.
+	say		Allows the user to use the "say" command.
+	user		Allows the user to add new users.
+	group		Allows the user to add new groups.
+	inherit		Allows the user to award rights they posses to users or groups.
+	hardban		Allows the user to hardban IPs. A hardban is a bit like firewalling the IP.
+	tag		This users does not need a tag to get in the hub.
+
+These aren't really rights, they are just easy shortcuts to rights.
+
+	default	Default capabilities: chat, pmop, dl and search.
+	reg		Default REG capabilities: chat, search, pm, dl.
+	vip		Default VIP capabilities: chat, search, pm, dl, share.
+	kvip		Default KVIP capabilities: chat, search, pm, dl, share, kick.
+	op		Default OP capabilities: chat, search, pm, dl, share, key, kick, ban.
+	cheef		Default CHEEF capabilities: chat, search, pm, dl, share, key, kick, ban, user.
+	admin		Default ADMIN capabilities: chat, search, pm, dl, share, key, kick, ban, user, group,
+	owner		Everything. All power full. Mostly, capable of hardbanning.
+
+You can always see which rights users have with the userinfo command.
+
+To assign rights you need the "inherit" right, without it you cannot assign rights or create groups. Even when you do have that right, you cannot assign any right you do not have yourself (except if you have the "owner" right).
+
+3.2) Group Management
+
+As mentioned before, a group is nothing more than a convenient way to control the default rights of a user. If a user is assigned to a group, he gains all the rights of that group. If the rights of a group are changed, this will
+affect the rights of all users in that group (from their next login). You cannot delete a group that still has users in it, so don't forget to delete them first.
+
+You can change the rights of a group with the grouprights command. If you want to add a right, just add the name or +name. To remove it use -name.
+
+Group management is controlled by the commands 
+
+	groupadd	Add a user group.
+	groupdel	Delete a user group.
+	grouplist	List all groups with their rights.
+	grouprights	Edit the rights of a user group.
+
+To create or modify groups, you need the "group" right. Since creating a group implicitly includes assigning rights, you need the "inherit" right too.
+
+
+3.3) User Management
+
+User accounts are a way to allow certain users more rights than others. Users get their rights from the group they've been assigned. They can also be granted extra rights on an individual basis.
+
+There are a few commands that control user management.
+
+	useradd		Add a user.
+	userdel		Delete a user.
+	userinfo	Show information of user.
+	userlist	List all users of a user group.
+	userrights	Edit the extra rights of a user.
+
+To create a user you need the "user" right. You cannot add a user to a group that has more rights than you have and you cannot assign a user extra rights, rights that are not by default in their group, unless you have the "inherit" right.
+
+
+4) Configuration Management
+
+4.1) Generic Configuration
+
+You can change and control all configuration settings with the following
+commands:
+
+	confighelp	Show configuration value help strings.
+	configset	Set configuration values. (You can use = as alias
+				for this command)
+	configshow	Show configuration.
+
+Use configset to change variables and configshow to view them. confighelp will give you a complete list of help variables and a short help string that explains them. You can find this list in Appendix A.
+
+
+4.2) Chat Rooms
+
+Chat Rooms are rooms in which groups of users can chat. All things said in a Chat room are only sent to the users in that chat room. Chat rooms have a few options that control how they behave.
+Private chat rooms cannot be joined at will. The only way to get in is to be autojoined. Public chat rooms can be joined by sending them a private message.
+Autojoin chat rooms auto join users when they log in. This is the only way to get into a private chat room. Autojoin can be controlled with a few options. You can autojoin all registered users or all users with a certain set of rights.
+
+These chat room commands are available:
+
+	chatroomadd	Add a chat room.
+	chatroomdel	Remove a chat room.
+	chatroomlist	Lists available chat rooms.
+
+The chatroomlist command will also show how many users are in each Chat room.
+
+An excellent example of an autojoin chat room that requires the right "key" is the OpChat.
+
+
+4.3) Triggers
+
+4.3.1) Overview
+
+Triggers are a way to execute external commands, paste external sources or text to users when logging in or when executing a command. There are two parts in creating these. First you create the content of the trigger
+then you control when the trigger is activated by adding a rule, the actual trigger itself.
+
+An excellent example of a file rule that has a login trigger is the MOTD (Message of the Day).
+
+All trigger and rule commands require the "config" right.
+
+
+4.3.2) Triggers
+
+These display or execute the contents of the trigger. The contents can be got from a file from a command (not yet implemented) or you can specify it at creation time.
+Note that the hub will detect any changes to the contents of these trigger files when you make the changes. 
+
+Trigger control commands are:
+
+	triggeradd	Add a trigger.
+	triggerdel	Delete a trigger.
+	triggerlist	List triggers.
+
+
+4.3.3) Rules
+
+Rule control, when the content of a trigger is displayed to a user. There are two ways currently implemented: at login or by a command. For both modes you can specify minimal rights that a user needs to have before the rule applies. There is no limit to the number of rules that can apply to a command.
+
+The rule commands are:
+
+	ruleadd		Add a rule.
+	ruledel		Delete a rule.
+	rulelist	List rules.
+
+5) Statistics
+
+Aquila supports a large number of statistics. A lot of them might seem cryptic and they probably are.
+
+	uptime		Show uptime.
+	statbot		Command returns info for the statbot.
+	statbuffer	Show buffer stats.
+	statbw		Show bandwidth stats.
+	statcache	Show cache stats.
+	statcpu		Show CPU usage stats.
+	statuser	Show logged in user counts.
+	statnmdc	Show a lot of nmdc protocol counters.
+
+APPENDIX A) List of configuration variables.
+
+accountsfile			Save file that stores the accounts.
+autosaveinterval		Period for autosaving settings, set to 0 to disable.
+cache.activesearch.period	Period of active search cache flush. This controls how often search messages are sent to active users.
+cache.chat.period		Period of chat cache flush. This controls how often chat messages are sent to users. It is advisable to keep this low.
+cache.join.period		Period of join cache flush. This controls how often users are notified of new joins.
+cache.passivesearch.period	Period of passive search cache flush. This controls how often search messages are sent to passive users.
+cache.pm.period			Period of private messages cache flush. This controls how often private messages are sent to users. It is advisable to keep this low.
+cache.quit.period		Period of quit cache flush. This controls how often quit messages are sent to users.
+cache.results.period		Period of search results cache flush. This controls how often search results are sent to passive users.
+cache.update.period		Period of update cache flush. This controls how often users are sent MyINFO updates. It is advisable to keep this high.
+cache.updateop.period		Period of operator update cache flush. This controls how often operators are sent MyINFO updates. It is advisable to keep this low.
+chatlog.lines			Maximum number of chat history lines.
+chatroom.file			Save file for chat rooms.
+configfile			Save file that stores all the hub settings.
+file.clientbanlist		Name of the file containing the client banlist.
+hardbanfile			Save file that stores the hard bans.
+hub.allowcloning		Allow multiple users from the same IP address.
+hub.op.max			Maximum hubs for Operators.
+hub.op.min			Minimum hubs for Operators.
+hub.registered.max		Maximum hubs for registered users.
+hub.registered.min		Minimum hubs for registered users.
+hub.unregistered.max		Maximum hubs for unregistered users.
+hub.unregistered.min		Minimum hubs for unregistered users.
+hubaddress			A hostname (or IP address) where your machine will be reachable.
+hubdescription			Description of the hub.
+hubname				Name of the hub
+hubowner			Owner of the hub.
+hubsecurity.desc		Description of the Hub Security bot.
+hubsecurity.nick		Name of the Hub Security bot.
+kickautobanlength		Length of automatic temporary ban after a kick.
+minpwdlength			Minimum length of a password.
+nickbanfile			Save file that stores the nickbans.
+
+nmdc.listenport			Port on which the hub will listen.
+nmdc.extraports			Extra NMDC ports to listen on.
+
+rate.chat.burst			Burst of chat messages. This controls how many chat messages a user can 'save up'. It is advisable to keep this low.
+rate.chat.period		Period of chat messages. This controls how often a user can send a chat message. It is advisable to keep this low.
+rate.connect.burst		Burst of connects. This controls how many new user connect can be saved up in idle time. It is advisable to keep this low.
+rate.connect.period		Period of connects. This controls how often the connect counter is refreshed. It is advisable to keep this low.
+rate.connect.refill		Refill of connects. This controls how many new user connects are added each time the counter resets. It is advisable to keep this low.
+rate.download.burst		Burst of downloads. This controls how many  downloads a user can 'save up'. It is advisable to keep this reasonable.
+rate.download.period		Period of downloads. This controls how often a user can initiate a download. It is advisable to keep this low.
+rate.getinfo.burst		Burst of getinfo requests. This controls how many getinfo requests a user can 'save up'.
+rate.getinfo.period		Period of getinfo requests. This controls how often a user can request info on a user. It is advisable to keep this low.
+rate.getnicklist.burst		Burst of nicklist requests. This controls how many userlist refreshes a user can 'save up'. Keep this at 1.
+rate.getnicklist.period		Period of nicklist requests. This controls how often a user can refresh his userlist. It is advisable to keep this high.
+rate.myinfo.burst		Burst of MyINFO messages. This controls how many MyINFO messages a user can 'save up'. Keep this at 1.
+rate.myinfo.period		Period of MyINFO messages. This controls how often a user can send a MyINFO message. It is advisable to keep this very high.
+rate.search.burst		Burst of searches. This controls how many searches a user can 'save up'. Keep this low.
+rate.search.period		Period of searches. This controls how often a user can search. Keep this reasonable.
+redirect			Redirection target.
+reporttarget			User to send report to. Can be a chatroom.
+sharemin.op			Minimum share requirement for OPS
+sharemin.registered		Minimum share requirement for registered users.
+sharemin.unregistered		Minimum share requirement for unregistered users.
+slot.op.max			Maximum slots for Operators.
+slot.op.min			Minimum slots for Operators.
+slot.op.ratio			Minimum hubs/slot ratio for Operators.
+slot.registered.max		Maximum slots for registered users.
+slot.registered.min		Minimum slots for registered users.
+slot.registered.ratio		Minimum hubs/slot ratio for registered users.
+slot.unregistered.max		Maximum slots for unregistered users.
+slot.unregistered.min		Minimum slots for unregistered users.
+slot.unregistered.ratio		Minimum hubs/slot ratio for unregistered users.
+softbanfile			Save file that stores the softbans.
+tag.maxdesclength		Maximum Length of the users description field.
+tag.maxemaillength		Maximum length of the users email address field.
+tag.maxsharelength		Maximum length of the users sharesize field.
+tag.maxspeedlength		Maximum length of the users speed field.
+tag.maxtaglength		Maximum length of the users tag field.
+user.defaultrights		This are the rights of an unregistered user.
+userlimit.op			Reserve place for this many ops in the registered users.
+userlimit.registered		Maximum registered users.
+userlimit.unregistered		Maximum unregistered users.
+
+
+APPENDIX B) List of commands
+
+help: Display help message.
+  help <command>
+
+myip: Shows you your IP address.
+  myip
+
+passwd: Change your password.
+  passwd [<user>] <passwd>
+
+kick: Kick a user. Automatic short ban included.
+  kick <nick> <reason>
+
+
+ban: Ban a user by nick.
+  ban <nick> [<period>] <reason>
+
+bannick: Nick ban a user by nick.
+  bannick <nick> [<period>] <reason>
+
+unban: Unban a nick.
+  unban <nick>
+
+banip: IP Ban a user by IP address.
+  banip <ip/nick> [<period>] <reason>
+
+unbanip: Unban an ip.
+  unbanip <ip>
+
+banlist: Show ban by nick/IP.
+  banlist <ip/nick>
+
+baniphard: Hardban an IP.
+  baniphard <ip/nick> [<period>] <reason>
+
+unbaniphard: Unhardban an IP.
+  unbaniphard <ip>
+
+chatlog: Command returns last chatlines.
+  chatlog
+
+chatroomadd: Add a chat room.
+  chatroomadd <room> <description> [<private>] [<autoreg>] [<autorights>] [<rights <rights>...>]
+	supply the flag "private" if you want the room autojoin or invite only.
+	supply the flag "autoreg" if you only want registered users to autojoin.
+	supply the flag "autorights" if you to autojoin all users with correct rights.
+	supply the flag "rights" if you want to autojoin users based on their rights, must be last argument!
+	be sure to add a description between ". For an empty description, provide "".
+
+chatroomdel: Remove a chat room.
+  chatroomdel <room>
+
+chatroomlist: Lists available chat rooms.
+  chatroomlist
+
+clientban: Ban a client.
+  clientban <clienttag> <minversion> <maxversion> <reason>
+
+clientbanlist: List client bans.
+  clientbanlist
+
+clientunban: Unban a client.
+  clientunban <clientname>
+
+
+confighelp: Show configuration value help string.
+  confighelp [<setting>]
+
+configset: Set configuration values.
+  configset <setting> <value>
+  use = as alias
+
+configshow: Show configuration.
+  configshow [<setting>]
+
+
+groupadd: Add a user group.
+  groupadd <group> <rights>...
+
+groupdel: Delete a user group.
+  groupdel <group>
+  
+grouplist: List all groups with their rights.
+  grouplist
+
+grouprights: Edit the rights of a user group.
+  grouprights <group> <[+]right/-right>...
+
+useradd: Add a user.
+  useradd <nick> <group> [<rights...>]
+
+userdel: Delete a user.
+  userdel <nick>
+
+userinfo: Show information of user.
+  userinfo <nick>
+
+userlist: List all users of a user group.
+  userlist
+
+userrights: Edit the extra rights of a user.
+  userrights <nick> <[+]right/-right>...
+
+massall: Send a private message to all users.
+  massall <message>
+
+help: Display help message.
+  help [<command>]
+
+myip: Shows you your IP address.
+  myip
+
+passwd: Change your password.
+  passwd [<user>] <new password>
+
+ruleadd: Add a rule.
+  ruleadd <name> <type> [<arg> <help>] [<cap>]
+   name: name of the trigger
+   type: one of:
+      - login   : the trigger will be triggered on user login, provide capabilties after type
+      - command : the trigger will be triggered by a command, provide the command in <arg>,
+                    then a help message for the command, followed by any required capabilities.
+   arg: depends on type 
+   help: help message for command
+   cap: capabilities required to activate rule
+
+
+ruledel: Delete a rule.
+  ruledel <name> <id>
+   name: name of the trigger
+   id  : ID of the rule
+
+rulelist: List rules.
+  rulelist
+
+triggeradd: Add a trigger.
+  triggeradd <name> <type> <arg>
+   name: name of the trigger
+   type: one of:
+      - text : the trigger will dump the text provided in arg, 
+      - file : the trigger will dump the contents of the file provided in arg
+      - command : the trigger will dump the output of the command provided in arg
+   arg: depends on type
+
+triggerdel: Delete a trigger.
+  triggerdel <name>
+   name: name of the trigger
+
+triggerlist: List triggers.
+  triggerlist
+
+save: Save all changes to file. WARNING: All previously saved settings will be lost!
+  save
+load: Reload all data from files. WARNING: All unsaved changes will be discarded.
+  load
+
+uptime: Show uptime.
+  uptime
+
+statbot: Command returns info for the statbot.
+  statbot
+
+statbuffer: Show buffer stats.
+  statbuffer
+
+statbw: Show cache stats.
+  statbw
+
+statcache: Show cache stats.
+  statcache
+
+statcpu: Show CPU usage stats.
+  statcpu
+
+statuser: Show logged in user counts.
+  statuser
+

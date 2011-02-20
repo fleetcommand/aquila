@@ -1,0 +1,22 @@
+
+Develstatus:
+	- maintain group order. cosmetic fix. (ffrag)
+	- move AcceptEx to handler. Add ConnectEx and the other one.
+	- <FleetCommand> plus, !iplog could accept ips too, not just nicks.. or, even better: ip patterns :)
+	- <FleetCommand> another request: when !unban nick both unbans ip and nick, it should report not just "nick bah unbanned" but it should let you know that the whole ban (ip and nick too) is removed
+	- no kicking ppl with same rights?
+	- create some sort of external statistics support.
+	- detect changes in Aquila.xml files
+	- Add some sort of command "context" support. 
+		(allow !help and !leave etc to work in chatrooms)
+	- SSL (not for 0.1)
+	- ADC (future)
+	- add a hideuser right?
+
+Large changes:
+	- stay in prelogin until the userlist is downloaded
+	- rebuild proto_nmdc_flush_cache()
+		use generic cache elements of 1->N, 1->(N-1) and 1->1 nature.
+	- split off timers in esocket.c, export them genericly
+	- consider adding the chunked approach FarCry suggested for the nicklistcache
+
